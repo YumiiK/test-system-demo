@@ -1,12 +1,56 @@
 from flask import Flask, json, request, session, render_template, redirect, flash, jsonify, make_response
 #from flask_debugtoolbar import DebugToolbarExtension
-from surveys import Question, Survey, trial, surveys
+from surveys import Question, Survey
 
 app = Flask(__name__)
 app.secret_key = "SECRET"
 
 #debug = DebugToolbarExtension(app)
 
+trial = Survey( "Trial",
+    "In this section, we have prepared several questions to familiarize you with them. After you choose the "
+    "answer, the correct answer will appear.",
+    []
+    )
+
+
+train_files= ["02_T2_M_100","03_T2_L_1k","04_T2_H_300"]
+
+with open('task2.json',mode='r') as f:
+    data = json.load(f)
+    all_t2 = data["T2"]
+    for i in train_files:
+        for j in range(len(all_t2)):
+            if all_t2[j]["index"]==i:
+                print(all_t2[j]["index"])
+                ques = Question(all_t2[j]["question"],[all_t2[j]["A"],all_t2[j]["B"],all_t2[j]["C"]],all_t2[j]["Answer"])
+                trial.questions.append(ques)
+                continue
+
+
+
+
+test = Survey(
+    "Test",
+    "In this section, you have 45 questions to answer. After every 15 questions, you can take a rest, then continue. "
+    "Begin the formal test now!",
+    [
+        Question("Do you ever dream about code?"),
+        Question("Do you ever have nightmares about code?"),
+        Question("Do you prefer porcupines or hedgehogs?",
+                 ["Porcupines", "Hedgehogs"]),
+        Question("Which is the worst function name, and why?",
+                 ["do_stuff()", "run_me()", "wtf()"],
+                 allow_text=True),
+    ]
+)
+
+
+
+surveys = {
+    "trial": trial,
+    "test": test,
+}
 
 @app.route('/')
 def home():
