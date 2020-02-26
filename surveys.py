@@ -23,9 +23,10 @@ class Survey:
         self.questions = questions
 
 
-satisfaction_survey = Survey(
-    "Customer Satisfaction Survey",
-    "Please fill out a survey about your experience with us.",
+trial = Survey(
+    "Trial",
+    "In this section, we have prepared several questions to familiarize you with them. After you choose the "
+    "answer, the correct answer will appear.",
     [
         Question("Have you shopped here before?"),
         Question("Did someone else shop with you today?"),
@@ -34,9 +35,10 @@ satisfaction_survey = Survey(
         Question("Are you likely to shop here again?"),
     ])
 
-personality_quiz = Survey(
-    "Rithm Personality Test",
-    "Learn more about yourself with our personality quiz!",
+test = Survey(
+    "Test",
+    "In this section, you have 45 questions to answer. After every 15 questions, you can take a rest, then continue. "
+    "Begin the formal test now!",
     [
         Question("Do you ever dream about code?"),
         Question("Do you ever have nightmares about code?"),
@@ -49,6 +51,6 @@ personality_quiz = Survey(
 )
 
 surveys = {
-    "satisfaction": satisfaction_survey,
-    "personality": personality_quiz,
+    "trial": trial,
+    "test": test,
 }

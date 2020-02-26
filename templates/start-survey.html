@@ -5,8 +5,8 @@
   <h1>{{title}}</h1>
   <h3>{{instructions}}</h3>
   <div id="start-survey">
-    <form action="/questions/0" method="POST">
-      <button type="submit">Start Survey</button>
+    <form action="/{{name}}/0" method="POST">
+      <button type="submit">Start</button>
     </form>
   </div>
   {% endblock %}

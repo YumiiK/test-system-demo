@@ -2,15 +2,15 @@
   {% block title %}Home Page{% endblock %}
 
   {% block body %}
-  <h1>Pick Your Survey!</h1>
+  <h1>Start Testing</h1>
   <div>
-    <form action="/start-survey" method="POST">
-      <select name="survey">
-        {% for survey in surveys %}
-        <option value="{{survey}}">{{survey}}</option>
-        {% endfor %}
-      </select>
-      <button type="submit">Survey Instructions</button>
+    <form action="/start-survey/trial" method="POST">
+{#      <select name="survey">#}
+{#        {% for survey in surveys %}#}
+{#        <option value="{{survey}}">{{survey}}</option>#}
+{#        {% endfor %}#}
+{#      </select>#}
+      <button type="submit">start</button>
     </form>
   </div>
   {% endblock %}
