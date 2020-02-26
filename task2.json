@@ -1,0 +1,1084 @@
+{
+    "T2":[
+    {
+    "index":"02_T1_H_100",
+    "question":"Which of the following statements about Mega-sena Brazil Lottery is true?",
+    "A":"A. There is a positive relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "B":"B. There is a negative relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "C":"C. There is no significant correlation between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "Answer":"1"
+    },
+    {
+    "index":"02_T1_L_300",
+    "question":"Which of the following statements about Mega-sena Brazil Lottery is true?",
+    "A":"A. There is a positive relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "B":"B. There is a negative relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "C":"C. There is no significant correlation between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "Answer":"3"
+    },
+    {
+    "index":"02_T1_M_1k",
+    "question":"Which of the following statements about Mega-sena Brazil Lottery is true?",
+    "A":"A. There is a positive relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "B":"B. There is a negative relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "C":"C. There is no significant correlation between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "Answer":"1"
+    },
+    {
+    "index":"02_T2_H_300",
+    "question":"Which of the following statements about Mega-sena Brazil Lottery is true?",
+    "A":"A. There is a positive relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "B":"B. There is a negative relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "C":"C. There is no significant correlation between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "Answer":"1"
+    },
+    {
+    "index":"02_T2_L_1k",
+    "question":"Which of the following statements about Mega-sena Brazil Lottery is true?",
+    "A":"A. There is a positive relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "B":"B. There is a negative relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "C":"C. There is no significant correlation between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "Answer":"3"
+    },
+    {
+    "index":"02_T2_M_100",
+    "question":"Which of the following statements about Mega-sena Brazil Lottery is true?",
+    "A":"A. There is a positive relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "B":"B. There is a negative relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "C":"C. There is no significant correlation between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "Answer":"1"
+    },
+    {
+    "index":"02_T3_H_1k",
+    "question":"Which of the following statements about Mega-sena Brazil Lottery is true?",
+    "A":"A. There is a positive relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "B":"B. There is a negative relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "C":"C. There is no significant correlation between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "Answer":"1"
+    },
+    {
+    "index":"02_T3_L_100",
+    "question":"Which of the following statements about Mega-sena Brazil Lottery is true?",
+    "A":"A. There is a positive relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "B":"B. There is a negative relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "C":"C. There is no significant correlation between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "Answer":"3"
+    },
+    {
+    "index":"02_T3_M_300",
+    "question":"Which of the following statements about Mega-sena Brazil Lottery is true?",
+    "A":"A. There is a positive relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "B":"B. There is a negative relationship between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "C":"C. There is no significant correlation between the Ganhadores_Quina and the Ganhadores_Quadra.",
+    "Answer":"1"
+    },
+    {
+    "index":"03_T1_H_100",
+    "question":"Which of the following statements about the prediction of admission is true?",
+    "A":"A. There is a positive relationship between the Grade Point Average and the Chance of Admit.",
+    "B":"B. There is a negative relationship between the Grade Point Average and the Chance of Admit.",
+    "C":"C. There is no significant correlation between the Grade Point Average and the Chance of Admit.",
+    "Answer":"1"
+    },
+    {
+    "index":"03_T1_L_300",
+    "question":"Which of the following statements about the prediction of admission is true?",
+    "A":"A. There is a positive relationship between the Grade Point Average and the Chance of Admit.",
+    "B":"B. There is a negative relationship between the Grade Point Average and the Chance of Admit.",
+    "C":"C. There is no significant correlation between the Grade Point Average and the Chance of Admit.",
+    "Answer":"3"
+    },
+    {
+    "index":"03_T1_M_1k",
+    "question":"Which of the following statements about the prediction of admission is true?",
+    "A":"A. There is a positive relationship between the Grade Point Average and the Chance of Admit.",
+    "B":"B. There is a negative relationship between the Grade Point Average and the Chance of Admit.",
+    "C":"C. There is no significant correlation between the Grade Point Average and the Chance of Admit.",
+    "Answer":"1"
+    },
+    {
+    "index":"03_T2_H_300",
+    "question":"Which of the following statements about the prediction of admission is true?",
+    "A":"A. There is a positive relationship between the Grade Point Average and the Chance of Admit.",
+    "B":"B. There is a negative relationship between the Grade Point Average and the Chance of Admit.",
+    "C":"C. There is no significant correlation between the Grade Point Average and the Chance of Admit.",
+    "Answer":"1"
+    },
+    {
+    "index":"03_T2_L_1k",
+    "question":"Which of the following statements about the prediction of admission is true?",
+    "A":"A. There is a positive relationship between the Grade Point Average and the Chance of Admit.",
+    "B":"B. There is a negative relationship between the Grade Point Average and the Chance of Admit.",
+    "C":"C. There is no significant correlation between the Grade Point Average and the Chance of Admit.",
+    "Answer":"3"
+    },
+    {
+    "index":"03_T2_M_100",
+    "question":"Which of the following statements about the prediction of admission is true?",
+    "A":"A. There is a positive relationship between the Grade Point Average and the Chance of Admit.",
+    "B":"B. There is a negative relationship between the Grade Point Average and the Chance of Admit.",
+    "C":"C. There is no significant correlation between the Grade Point Average and the Chance of Admit.",
+    "Answer":"1"
+    },
+    {
+    "index":"03_T3_H_1k",
+    "question":"Which of the following statements about the prediction of admission is true?",
+    "A":"A. There is a positive relationship between the Grade Point Average and the Chance of Admit.",
+    "B":"B. There is a negative relationship between the Grade Point Average and the Chance of Admit.",
+    "C":"C. There is no significant correlation between the Grade Point Average and the Chance of Admit.",
+    "Answer":"1"
+    },
+    {
+    "index":"03_T3_L_100",
+    "question":"Which of the following statements about the prediction of admission is true?",
+    "A":"A. There is a positive relationship between the Grade Point Average and the Chance of Admit.",
+    "B":"B. There is a negative relationship between the Grade Point Average and the Chance of Admit.",
+    "C":"C. There is no significant correlation between the Grade Point Average and the Chance of Admit.",
+    "Answer":"3"
+    },
+    {
+    "index":"03_T3_M_300",
+    "question":"Which of the following statements about the prediction of admission is true?",
+    "A":"A. There is a positive relationship between the Grade Point Average and the Chance of Admit.",
+    "B":"B. There is a negative relationship between the Grade Point Average and the Chance of Admit.",
+    "C":"C. There is no significant correlation between the Grade Point Average and the Chance of Admit.",
+    "Answer":"1"
+    },
+    {
+    "index":"04_T1_H_100",
+    "question":"Which of the following statements about this city is true?",
+    "A":"A. There is a positive linear relationship between the Murder and the Aggravated Assault.",
+    "B":"B. There is a negative linear relationship between the Murder and the Aggravated Assault.",
+    "C":"C. There is no significant correlation between the Murder and the Aggravated Assault.",
+    "Answer":"1"
+    },
+    {
+    "index":"04_T1_L_300",
+    "question":"Which of the following statements about this city is true?",
+    "A":"A. There is a positive linear relationship between the Murder and the Aggravated Assault.",
+    "B":"B. There is a negative linear relationship between the Murder and the Aggravated Assault.",
+    "C":"C. There is no significant correlation between the Murder and the Aggravated Assault.",
+    "Answer":"3"
+    },
+    {
+    "index":"04_T1_M_1k",
+    "question":"Which of the following statements about this city is true?",
+    "A":"A. There is a positive linear relationship between the Murder and the Aggravated Assault.",
+    "B":"B. There is a negative linear relationship between the Murder and the Aggravated Assault.",
+    "C":"C. There is no significant correlation between the Murder and the Aggravated Assault.",
+    "Answer":"1"
+    },
+    {
+    "index":"04_T2_H_300",
+    "question":"Which of the following statements about this city is true?",
+    "A":"A. There is a positive linear relationship between the Murder and the Aggravated Assault.",
+    "B":"B. There is a negative linear relationship between the Murder and the Aggravated Assault.",
+    "C":"C. There is no significant correlation between the Murder and the Aggravated Assault.",
+    "Answer":"1"
+    },
+    {
+    "index":"04_T2_L_1k",
+    "question":"Which of the following statements about this city is true?",
+    "A":"A. There is a positive linear relationship between the Murder and the Aggravated Assault.",
+    "B":"B. There is a negative linear relationship between the Murder and the Aggravated Assault.",
+    "C":"C. There is no significant correlation between the Murder and the Aggravated Assault.",
+    "Answer":"3"
+    },
+    {
+    "index":"04_T2_M_100",
+    "question":"Which of the following statements about this city is true?",
+    "A":"A. There is a positive linear relationship between the Murder and the Aggravated Assault.",
+    "B":"B. There is a negative linear relationship between the Murder and the Aggravated Assault.",
+    "C":"C. There is no significant correlation between the Murder and the Aggravated Assault.",
+    "Answer":"1"
+    },
+    {
+    "index":"04_T3_H_1k",
+    "question":"Which of the following statements about this city is true?",
+    "A":"A. There is a positive linear relationship between the Murder and the Aggravated Assault.",
+    "B":"B. There is a negative linear relationship between the Murder and the Aggravated Assault.",
+    "C":"C. There is no significant correlation between the Murder and the Aggravated Assault.",
+    "Answer":"1"
+    },
+    {
+    "index":"04_T3_L_100",
+    "question":"Which of the following statements about this city is true?",
+    "A":"A. There is a positive linear relationship between the Murder and the Aggravated Assault.",
+    "B":"B. There is a negative linear relationship between the Murder and the Aggravated Assault.",
+    "C":"C. There is no significant correlation between the Murder and the Aggravated Assault.",
+    "Answer":"3"
+    },
+    {
+    "index":"04_T3_M_300",
+    "question":"Which of the following statements about this city is true?",
+    "A":"A. There is a positive linear relationship between the Murder and the Aggravated Assault.",
+    "B":"B. There is a negative linear relationship between the Murder and the Aggravated Assault.",
+    "C":"C. There is no significant correlation between the Murder and the Aggravated Assault.",
+    "Answer":"1"
+    },
+    {
+    "index":"05_T1_H_100",
+    "question":"Which of the following statements about the sale of avocado is true?",
+    "A":"A. There is a positive relationship between the Average Price and the Total Volumn.",
+    "B":"B. There is a negative relationship between the Average Price and the Total Volumn.",
+    "C":"C. There is no significant correlation between the Average Price and the Total Volumn.",
+    "Answer":"2"
+    },
+    {
+    "index":"05_T1_L_300",
+    "question":"Which of the following statements about the sale of avocado is true?",
+    "A":"A. There is a positive relationship between the Average Price and the Total Volumn.",
+    "B":"B. There is a negative relationship between the Average Price and the Total Volumn.",
+    "C":"C. There is no significant correlation between the Average Price and the Total Volumn.",
+    "Answer":"3"
+    },
+    {
+    "index":"05_T1_M_1k",
+    "question":"Which of the following statements about the sale of avocado is true?",
+    "A":"A. There is a positive relationship between the Average Price and the Total Volumn.",
+    "B":"B. There is a negative relationship between the Average Price and the Total Volumn.",
+    "C":"C. There is no significant correlation between the Average Price and the Total Volumn.",
+    "Answer":"2"
+    },
+    {
+    "index":"05_T2_H_300",
+    "question":"Which of the following statements about the sale of avocado is true?",
+    "A":"A. There is a positive relationship between the Average Price and the Total Volumn.",
+    "B":"B. There is a negative relationship between the Average Price and the Total Volumn.",
+    "C":"C. There is no significant correlation between the Average Price and the Total Volumn.",
+    "Answer":"2"
+    },
+    {
+    "index":"05_T2_L_1k",
+    "question":"Which of the following statements about the sale of avocado is true?",
+    "A":"A. There is a positive relationship between the Average Price and the Total Volumn.",
+    "B":"B. There is a negative relationship between the Average Price and the Total Volumn.",
+    "C":"C. There is no significant correlation between the Average Price and the Total Volumn.",
+    "Answer":"3"
+    },
+    {
+    "index":"05_T2_M_100",
+    "question":"Which of the following statements about the sale of avocado is true?",
+    "A":"A. There is a positive relationship between the Average Price and the Total Volumn.",
+    "B":"B. There is a negative relationship between the Average Price and the Total Volumn.",
+    "C":"C. There is no significant correlation between the Average Price and the Total Volumn.",
+    "Answer":"2"
+    },
+    {
+    "index":"05_T3_H_1k",
+    "question":"Which of the following statements about the sale of avocado is true?",
+    "A":"A. There is a positive relationship between the Average Price and the Total Volumn.",
+    "B":"B. There is a negative relationship between the Average Price and the Total Volumn.",
+    "C":"C. There is no significant correlation between the Average Price and the Total Volumn.",
+    "Answer":"2"
+    },
+    {
+    "index":"05_T3_L_100",
+    "question":"Which of the following statements about the sale of avocado is true?",
+    "A":"A. There is a positive relationship between the Average Price and the Total Volumn.",
+    "B":"B. There is a negative relationship between the Average Price and the Total Volumn.",
+    "C":"C. There is no significant correlation between the Average Price and the Total Volumn.",
+    "Answer":"3"
+    },
+    {
+    "index":"05_T3_M_300",
+    "question":"Which of the following statements about the sale of avocado is true?",
+    "A":"A. There is a positive relationship between the Average Price and the Total Volumn.",
+    "B":"B. There is a negative relationship between the Average Price and the Total Volumn.",
+    "C":"C. There is no significant correlation between the Average Price and the Total Volumn.",
+    "Answer":"2"
+    },
+    {
+    "index":"06_T1_H_100",
+    "question":"Which of the following statements about these basketball teams is true?",
+    "A":"A. There is a positive relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "B":"B. There is a negative relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "C":"C. There is no significant correlation between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "Answer":"1"
+    },
+    {
+    "index":"06_T1_L_300",
+    "question":"Which of the following statements about these basketball teams is true?",
+    "A":"A. There is a positive relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "B":"B. There is a negative relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "C":"C. There is no significant correlation between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "Answer":"3"
+    },
+    {
+    "index":"06_T1_M_1k",
+    "question":"Which of the following statements about these basketball teams is true?",
+    "A":"A. There is a positive relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "B":"B. There is a negative relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "C":"C. There is no significant correlation between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "Answer":"1"
+    },
+    {
+    "index":"06_T2_H_300",
+    "question":"Which of the following statements about these basketball teams is true?",
+    "A":"A. There is a positive relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "B":"B. There is a negative relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "C":"C. There is no significant correlation between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "Answer":"1"
+    },
+    {
+    "index":"06_T2_L_1k",
+    "question":"Which of the following statements about these basketball teams is true?",
+    "A":"A. There is a positive relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "B":"B. There is a negative relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "C":"C. There is no significant correlation between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "Answer":"3"
+    },
+    {
+    "index":"06_T2_M_100",
+    "question":"Which of the following statements about these basketball teams is true?",
+    "A":"A. There is a positive relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "B":"B. There is a negative relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "C":"C. There is no significant correlation between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "Answer":"1"
+    },
+    {
+    "index":"06_T3_H_1k",
+    "question":"Which of the following statements about these basketball teams is true?",
+    "A":"A. There is a positive relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "B":"B. There is a negative relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "C":"C. There is no significant correlation between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "Answer":"1"
+    },
+    {
+    "index":"06_T3_L_100",
+    "question":"Which of the following statements about these basketball teams is true?",
+    "A":"A. There is a positive relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "B":"B. There is a negative relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "C":"C. There is no significant correlation between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "Answer":"3"
+    },
+    {
+    "index":"06_T3_M_300",
+    "question":"Which of the following statements about these basketball teams is true?",
+    "A":"A. There is a positive relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "B":"B. There is a negative relationship between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "C":"C. There is no significant correlation between the Probability of HOME Victory and the Probability of AWAY Victory.",
+    "Answer":"1"
+    },
+    {
+    "index":"16_T1_H_100",
+    "question":"Which of the following statements about the world in 2015-2019 is true?",
+    "A":"A. There is a positive relationship between Economy and the Happiness Score.",
+    "B":"B. There is a negative relationship between Economy and the Happiness Score.",
+    "C":"C. There is no significant correlation between Economy and the Happiness Score.",
+    "Answer":"1"
+    },
+    {
+    "index":"16_T1_L_300",
+    "question":"Which of the following statements about the world in 2015-2019 is true?",
+    "A":"A. There is a positive relationship between Economy and the Happiness Score.",
+    "B":"B. There is a negative relationship between Economy and the Happiness Score.",
+    "C":"C. There is no significant correlation between Economy and the Happiness Score.",
+    "Answer":"3"
+    },
+    {
+    "index":"16_T1_M_1k",
+    "question":"Which of the following statements about the world in 2015-2019 is true?",
+    "A":"A. There is a positive relationship between Economy and the Happiness Score.",
+    "B":"B. There is a negative relationship between Economy and the Happiness Score.",
+    "C":"C. There is no significant correlation between Economy and the Happiness Score.",
+    "Answer":"1"
+    },
+    {
+    "index":"16_T2_H_300",
+    "question":"Which of the following statements about the world in 2015-2019 is true?",
+    "A":"A. There is a positive relationship between Economy and the Happiness Score.",
+    "B":"B. There is a negative relationship between Economy and the Happiness Score.",
+    "C":"C. There is no significant correlation between Economy and the Happiness Score.",
+    "Answer":"1"
+    },
+    {
+    "index":"16_T2_L_1k",
+    "question":"Which of the following statements about the world in 2015-2019 is true?",
+    "A":"A. There is a positive relationship between Economy and the Happiness Score.",
+    "B":"B. There is a negative relationship between Economy and the Happiness Score.",
+    "C":"C. There is no significant correlation between Economy and the Happiness Score.",
+    "Answer":"3"
+    },
+    {
+    "index":"16_T2_M_100",
+    "question":"Which of the following statements about the world in 2015-2019 is true?",
+    "A":"A. There is a positive relationship between Economy and the Happiness Score.",
+    "B":"B. There is a negative relationship between Economy and the Happiness Score.",
+    "C":"C. There is no significant correlation between Economy and the Happiness Score.",
+    "Answer":"1"
+    },
+    {
+    "index":"16_T3_H_1k",
+    "question":"Which of the following statements about the world in 2015-2019 is true?",
+    "A":"A. There is a positive relationship between Economy and the Happiness Score.",
+    "B":"B. There is a negative relationship between Economy and the Happiness Score.",
+    "C":"C. There is no significant correlation between Economy and the Happiness Score.",
+    "Answer":"1"
+    },
+    {
+    "index":"16_T3_L_100",
+    "question":"Which of the following statements about the world in 2015-2019 is true?",
+    "A":"A. There is a positive relationship between Economy and the Happiness Score.",
+    "B":"B. There is a negative relationship between Economy and the Happiness Score.",
+    "C":"C. There is no significant correlation between Economy and the Happiness Score.",
+    "Answer":"3"
+    },
+    {
+    "index":"16_T3_M_300",
+    "question":"Which of the following statements about the world in 2015-2019 is true?",
+    "A":"A. There is a positive relationship between Economy and the Happiness Score.",
+    "B":"B. There is a negative relationship between Economy and the Happiness Score.",
+    "C":"C. There is no significant correlation between Economy and the Happiness Score.",
+    "Answer":"1"
+    },
+    {
+    "index":"17_T1_H_100",
+    "question":"Which of the following statements about students performance in exams is true?",
+    "A":"A. There is a positive relationship between the Reading Score and the Math Score.",
+    "B":"B. There is a negative relationship between the Reading Score and the Math Score.",
+    "C":"C. There is no significant correlation between the Reading Score and the Math Score.",
+    "Answer":"1"
+    },
+    {
+    "index":"17_T1_L_300",
+    "question":"Which of the following statements about students performance in exams is true?",
+    "A":"A. There is a positive relationship between the Reading Score and the Math Score.",
+    "B":"B. There is a negative relationship between the Reading Score and the Math Score.",
+    "C":"C. There is no significant correlation between the Reading Score and the Math Score.",
+    "Answer":"3"
+    },
+    {
+    "index":"17_T1_M_1k",
+    "question":"Which of the following statements about students performance in exams is true?",
+    "A":"A. There is a positive relationship between the Reading Score and the Math Score.",
+    "B":"B. There is a negative relationship between the Reading Score and the Math Score.",
+    "C":"C. There is no significant correlation between the Reading Score and the Math Score.",
+    "Answer":"1"
+    },
+    {
+    "index":"17_T2_H_300",
+    "question":"Which of the following statements about students performance in exams is true?",
+    "A":"A. There is a positive relationship between the Reading Score and the Math Score.",
+    "B":"B. There is a negative relationship between the Reading Score and the Math Score.",
+    "C":"C. There is no significant correlation between the Reading Score and the Math Score.",
+    "Answer":"1"
+    },
+    {
+    "index":"17_T2_L_1k",
+    "question":"Which of the following statements about students performance in exams is true?",
+    "A":"A. There is a positive relationship between the Reading Score and the Math Score.",
+    "B":"B. There is a negative relationship between the Reading Score and the Math Score.",
+    "C":"C. There is no significant correlation between the Reading Score and the Math Score.",
+    "Answer":"3"
+    },
+    {
+    "index":"17_T2_M_100",
+    "question":"Which of the following statements about students performance in exams is true?",
+    "A":"A. There is a positive relationship between the Reading Score and the Math Score.",
+    "B":"B. There is a negative relationship between the Reading Score and the Math Score.",
+    "C":"C. There is no significant correlation between the Reading Score and the Math Score.",
+    "Answer":"1"
+    },
+    {
+    "index":"17_T3_H_1k",
+    "question":"Which of the following statements about students performance in exams is true?",
+    "A":"A. There is a positive relationship between the Reading Score and the Math Score.",
+    "B":"B. There is a negative relationship between the Reading Score and the Math Score.",
+    "C":"C. There is no significant correlation between the Reading Score and the Math Score.",
+    "Answer":"1"
+    },
+    {
+    "index":"17_T3_L_100",
+    "question":"Which of the following statements about students performance in exams is true?",
+    "A":"A. There is a positive relationship between the Reading Score and the Math Score.",
+    "B":"B. There is a negative relationship between the Reading Score and the Math Score.",
+    "C":"C. There is no significant correlation between the Reading Score and the Math Score.",
+    "Answer":"3"
+    },
+    {
+    "index":"17_T3_M_300",
+    "question":"Which of the following statements about students performance in exams is true?",
+    "A":"A. There is a positive relationship between the Reading Score and the Math Score.",
+    "B":"B. There is a negative relationship between the Reading Score and the Math Score.",
+    "C":"C. There is no significant correlation between the Reading Score and the Math Score.",
+    "Answer":"1"
+    },
+    {
+    "index":"20_T2_H_100",
+    "question":"Which of the following statements about forest fires is true?",
+    "A":"A. There is a positive relationship between the Temperature and the Relative Humidity.",
+    "B":"B. There is a negative relationship between the Temperature and the Relative Humidity.",
+    "C":"C. There is no significant correlation between the Temperature and the Relative Humidity.",
+    "Answer":"2"
+    },
+    {
+    "index":"20_T2_H_1k",
+    "question":"Which of the following statements about forest fires is true?",
+    "A":"A. There is a positive relationship between the Temperature and the Relative Humidity.",
+    "B":"B. There is a negative relationship between the Temperature and the Relative Humidity.",
+    "C":"C. There is no significant correlation between the Temperature and the Relative Humidity.",
+    "Answer":"2"
+    },
+    {
+    "index":"20_T2_H_300",
+    "question":"Which of the following statements about forest fires is true?",
+    "A":"A. There is a positive relationship between the Temperature and the Relative Humidity.",
+    "B":"B. There is a negative relationship between the Temperature and the Relative Humidity.",
+    "C":"C. There is no significant correlation between the Temperature and the Relative Humidity.",
+    "Answer":"2"
+    },
+    {
+    "index":"20_T2_L_100",
+    "question":"Which of the following statements about forest fires is true?",
+    "A":"A. There is a positive relationship between the Temperature and the Relative Humidity.",
+    "B":"B. There is a negative relationship between the Temperature and the Relative Humidity.",
+    "C":"C. There is no significant correlation between the Temperature and the Relative Humidity.",
+    "Answer":"3"
+    },
+    {
+    "index":"20_T2_L_1k",
+    "question":"Which of the following statements about forest fires is true?",
+    "A":"A. There is a positive relationship between the Temperature and the Relative Humidity.",
+    "B":"B. There is a negative relationship between the Temperature and the Relative Humidity.",
+    "C":"C. There is no significant correlation between the Temperature and the Relative Humidity.",
+    "Answer":"3"
+    },
+    {
+    "index":"20_T2_L_300",
+    "question":"Which of the following statements about forest fires is true?",
+    "A":"A. There is a positive relationship between the Temperature and the Relative Humidity.",
+    "B":"B. There is a negative relationship between the Temperature and the Relative Humidity.",
+    "C":"C. There is no significant correlation between the Temperature and the Relative Humidity.",
+    "Answer":"3"
+    },
+    {
+    "index":"20_T2_M_100",
+    "question":"Which of the following statements about forest fires is true?",
+    "A":"A. There is a positive relationship between the Temperature and the Relative Humidity.",
+    "B":"B. There is a negative relationship between the Temperature and the Relative Humidity.",
+    "C":"C. There is no significant correlation between the Temperature and the Relative Humidity.",
+    "Answer":"2"
+    },
+    {
+    "index":"20_T2_M_1k",
+    "question":"Which of the following statements about forest fires is true?",
+    "A":"A. There is a positive relationship between the Temperature and the Relative Humidity.",
+    "B":"B. There is a negative relationship between the Temperature and the Relative Humidity.",
+    "C":"C. There is no significant correlation between the Temperature and the Relative Humidity.",
+    "Answer":"2"
+    },
+    {
+    "index":"20_T2_M_300",
+    "question":"Which of the following statements about forest fires is true?",
+    "A":"A. There is a positive relationship between the Temperature and the Relative Humidity.",
+    "B":"B. There is a negative relationship between the Temperature and the Relative Humidity.",
+    "C":"C. There is no significant correlation between the Temperature and the Relative Humidity.",
+    "Answer":"2"
+    },
+    {
+    "index":"23_T2_H_100",
+    "question":"Which of the following statements about the cars is true? (MSRP: manufacture's suggested retail price)",
+    "A":"A. There is a positive relationship between their Popularity and MSRP.",
+    "B":"B. There is a negative relationship between their Popularity and MSRP.",
+    "C":"C. There is no significant correlation between their Popularity and MSRP.",
+    "Answer":"2"
+    },
+    {
+    "index":"23_T2_H_1k",
+    "question":"Which of the following statements about the cars is true? (MSRP: manufacture's suggested retail price)",
+    "A":"A. There is a positive relationship between their Popularity and MSRP.",
+    "B":"B. There is a negative relationship between their Popularity and MSRP.",
+    "C":"C. There is no significant correlation between their Popularity and MSRP.",
+    "Answer":"2"
+    },
+    {
+    "index":"23_T2_H_300",
+    "question":"Which of the following statements about the cars is true? (MSRP: manufacture's suggested retail price)",
+    "A":"A. There is a positive relationship between their Popularity and MSRP.",
+    "B":"B. There is a negative relationship between their Popularity and MSRP.",
+    "C":"C. There is no significant correlation between their Popularity and MSRP.",
+    "Answer":"2"
+    },
+    {
+    "index":"23_T2_L_100",
+    "question":"Which of the following statements about the cars is true? (MSRP: manufacture's suggested retail price)",
+    "A":"A. There is a positive relationship between their Popularity and MSRP.",
+    "B":"B. There is a negative relationship between their Popularity and MSRP.",
+    "C":"C. There is no significant correlation between their Popularity and MSRP.",
+    "Answer":"3"
+    },
+    {
+    "index":"23_T2_L_1k",
+    "question":"Which of the following statements about the cars is true? (MSRP: manufacture's suggested retail price)",
+    "A":"A. There is a positive relationship between their Popularity and MSRP.",
+    "B":"B. There is a negative relationship between their Popularity and MSRP.",
+    "C":"C. There is no significant correlation between their Popularity and MSRP.",
+    "Answer":"3"
+    },
+    {
+    "index":"23_T2_L_300",
+    "question":"Which of the following statements about the cars is true? (MSRP: manufacture's suggested retail price)",
+    "A":"A. There is a positive relationship between their Popularity and MSRP.",
+    "B":"B. There is a negative relationship between their Popularity and MSRP.",
+    "C":"C. There is no significant correlation between their Popularity and MSRP.",
+    "Answer":"3"
+    },
+    {
+    "index":"23_T2_M_100",
+    "question":"Which of the following statements about the cars is true? (MSRP: manufacture's suggested retail price)",
+    "A":"A. There is a positive relationship between their Popularity and MSRP.",
+    "B":"B. There is a negative relationship between their Popularity and MSRP.",
+    "C":"C. There is no significant correlation between their Popularity and MSRP.",
+    "Answer":"2"
+    },
+    {
+    "index":"23_T2_M_1k",
+    "question":"Which of the following statements about the cars is true? (MSRP: manufacture's suggested retail price)",
+    "A":"A. There is a positive relationship between their Popularity and MSRP.",
+    "B":"B. There is a negative relationship between their Popularity and MSRP.",
+    "C":"C. There is no significant correlation between their Popularity and MSRP.",
+    "Answer":"2"
+    },
+    {
+    "index":"23_T2_M_300",
+    "question":"Which of the following statements about the cars is true? (MSRP: manufacture's suggested retail price)",
+    "A":"A. There is a positive relationship between their Popularity and MSRP.",
+    "B":"B. There is a negative relationship between their Popularity and MSRP.",
+    "C":"C. There is no significant correlation between their Popularity and MSRP.",
+    "Answer":"2"
+    },
+    {
+    "index":"24_T2_H_100",
+    "question":"Which of the following statements about chess game rating in black's victory is true?",
+    "A":"A. There is a positive relationship between the White Rating and the Black Rating.",
+    "B":"B. There is a negative relationship between the White Rating and the Black Rating.",
+    "C":"C. There is no significant correlation between the White Rating and the Black Rating.",
+    "Answer":"1"
+    },
+    {
+    "index":"24_T2_H_1k",
+    "question":"Which of the following statements about chess game rating in black's victory is true?",
+    "A":"A. There is a positive relationship between the White Rating and the Black Rating.",
+    "B":"B. There is a negative relationship between the White Rating and the Black Rating.",
+    "C":"C. There is no significant correlation between the White Rating and the Black Rating.",
+    "Answer":"1"
+    },
+    {
+    "index":"24_T2_H_300",
+    "question":"Which of the following statements about chess game rating in black's victory is true?",
+    "A":"A. There is a positive relationship between the White Rating and the Black Rating.",
+    "B":"B. There is a negative relationship between the White Rating and the Black Rating.",
+    "C":"C. There is no significant correlation between the White Rating and the Black Rating.",
+    "Answer":"1"
+    },
+    {
+    "index":"24_T2_L_100",
+    "question":"Which of the following statements about chess game rating in black's victory is true?",
+    "A":"A. There is a positive relationship between the White Rating and the Black Rating.",
+    "B":"B. There is a negative relationship between the White Rating and the Black Rating.",
+    "C":"C. There is no significant correlation between the White Rating and the Black Rating.",
+    "Answer":"3"
+    },
+    {
+    "index":"24_T2_L_1k",
+    "question":"Which of the following statements about chess game rating in black's victory is true?",
+    "A":"A. There is a positive relationship between the White Rating and the Black Rating.",
+    "B":"B. There is a negative relationship between the White Rating and the Black Rating.",
+    "C":"C. There is no significant correlation between the White Rating and the Black Rating.",
+    "Answer":"3"
+    },
+    {
+    "index":"24_T2_L_300",
+    "question":"Which of the following statements about chess game rating in black's victory is true?",
+    "A":"A. There is a positive relationship between the White Rating and the Black Rating.",
+    "B":"B. There is a negative relationship between the White Rating and the Black Rating.",
+    "C":"C. There is no significant correlation between the White Rating and the Black Rating.",
+    "Answer":"3"
+    },
+    {
+    "index":"24_T2_M_100",
+    "question":"Which of the following statements about chess game rating in black's victory is true?",
+    "A":"A. There is a positive relationship between the White Rating and the Black Rating.",
+    "B":"B. There is a negative relationship between the White Rating and the Black Rating.",
+    "C":"C. There is no significant correlation between the White Rating and the Black Rating.",
+    "Answer":"1"
+    },
+    {
+    "index":"24_T2_M_1k",
+    "question":"Which of the following statements about chess game rating in black's victory is true?",
+    "A":"A. There is a positive relationship between the White Rating and the Black Rating.",
+    "B":"B. There is a negative relationship between the White Rating and the Black Rating.",
+    "C":"C. There is no significant correlation between the White Rating and the Black Rating.",
+    "Answer":"1"
+    },
+    {
+    "index":"24_T2_M_300",
+    "question":"Which of the following statements about chess game rating in black's victory is true?",
+    "A":"A. There is a positive relationship between the White Rating and the Black Rating.",
+    "B":"B. There is a negative relationship between the White Rating and the Black Rating.",
+    "C":"C. There is no significant correlation between the White Rating and the Black Rating.",
+    "Answer":"1"
+    },
+    {
+    "index":"25_T2_H_100",
+    "question":"Which of the following statements about California is true?",
+    "A":"A. There is a positive relationship between the Median Income and the Median House Value there.",
+    "B":"B. There is a negative relationship between the Median Income and the Median House Value there.",
+    "C":"C. There is no significant correlation between the Median Income and the Median House Value there.",
+    "Answer":"1"
+    },
+    {
+    "index":"25_T2_H_1k",
+    "question":"Which of the following statements about California is true?",
+    "A":"A. There is a positive relationship between the Median Income and the Median House Value there.",
+    "B":"B. There is a negative relationship between the Median Income and the Median House Value there.",
+    "C":"C. There is no significant correlation between the Median Income and the Median House Value there.",
+    "Answer":"1"
+    },
+    {
+    "index":"25_T2_H_300",
+    "question":"Which of the following statements about California is true?",
+    "A":"A. There is a positive relationship between the Median Income and the Median House Value there.",
+    "B":"B. There is a negative relationship between the Median Income and the Median House Value there.",
+    "C":"C. There is no significant correlation between the Median Income and the Median House Value there.",
+    "Answer":"1"
+    },
+    {
+    "index":"25_T2_L_100",
+    "question":"Which of the following statements about California is true?",
+    "A":"A. There is a positive relationship between the Median Income and the Median House Value there.",
+    "B":"B. There is a negative relationship between the Median Income and the Median House Value there.",
+    "C":"C. There is no significant correlation between the Median Income and the Median House Value there.",
+    "Answer":"3"
+    },
+    {
+    "index":"25_T2_L_1k",
+    "question":"Which of the following statements about California is true?",
+    "A":"A. There is a positive relationship between the Median Income and the Median House Value there.",
+    "B":"B. There is a negative relationship between the Median Income and the Median House Value there.",
+    "C":"C. There is no significant correlation between the Median Income and the Median House Value there.",
+    "Answer":"3"
+    },
+    {
+    "index":"25_T2_L_300",
+    "question":"Which of the following statements about California is true?",
+    "A":"A. There is a positive relationship between the Median Income and the Median House Value there.",
+    "B":"B. There is a negative relationship between the Median Income and the Median House Value there.",
+    "C":"C. There is no significant correlation between the Median Income and the Median House Value there.",
+    "Answer":"3"
+    },
+    {
+    "index":"25_T2_M_100",
+    "question":"Which of the following statements about California is true?",
+    "A":"A. There is a positive relationship between the Median Income and the Median House Value there.",
+    "B":"B. There is a negative relationship between the Median Income and the Median House Value there.",
+    "C":"C. There is no significant correlation between the Median Income and the Median House Value there.",
+    "Answer":"1"
+    },
+    {
+    "index":"25_T2_M_1k",
+    "question":"Which of the following statements about California is true?",
+    "A":"A. There is a positive relationship between the Median Income and the Median House Value there.",
+    "B":"B. There is a negative relationship between the Median Income and the Median House Value there.",
+    "C":"C. There is no significant correlation between the Median Income and the Median House Value there.",
+    "Answer":"1"
+    },
+    {
+    "index":"25_T2_M_300",
+    "question":"Which of the following statements about California is true?",
+    "A":"A. There is a positive relationship between the Median Income and the Median House Value there.",
+    "B":"B. There is a negative relationship between the Median Income and the Median House Value there.",
+    "C":"C. There is no significant correlation between the Median Income and the Median House Value there.",
+    "Answer":"1"
+    },
+    {
+    "index":"26_T2_H_100",
+    "question":"Which of the following statements about telco customer churn is true?",
+    "A":"A. There is a positive relationship between their Monthly Charges and Tenure.",
+    "B":"B. There is a negative relationship between their Monthly Charges and Tenure.",
+    "C":"C. There is no significant correlation between their Monthly Charges and Tenure.",
+    "Answer":"1"
+    },
+    {
+    "index":"26_T2_H_1k",
+    "question":"Which of the following statements about telco customer churn is true?",
+    "A":"A. There is a positive relationship between their Monthly Charges and Tenure.",
+    "B":"B. There is a negative relationship between their Monthly Charges and Tenure.",
+    "C":"C. There is no significant correlation between their Monthly Charges and Tenure.",
+    "Answer":"1"
+    },
+    {
+    "index":"26_T2_H_300",
+    "question":"Which of the following statements about telco customer churn is true?",
+    "A":"A. There is a positive relationship between their Monthly Charges and Tenure.",
+    "B":"B. There is a negative relationship between their Monthly Charges and Tenure.",
+    "C":"C. There is no significant correlation between their Monthly Charges and Tenure.",
+    "Answer":"1"
+    },
+    {
+    "index":"26_T2_L_100",
+    "question":"Which of the following statements about telco customer churn is true?",
+    "A":"A. There is a positive relationship between their Monthly Charges and Tenure.",
+    "B":"B. There is a negative relationship between their Monthly Charges and Tenure.",
+    "C":"C. There is no significant correlation between their Monthly Charges and Tenure.",
+    "Answer":"3"
+    },
+    {
+    "index":"26_T2_L_1k",
+    "question":"Which of the following statements about telco customer churn is true?",
+    "A":"A. There is a positive relationship between their Monthly Charges and Tenure.",
+    "B":"B. There is a negative relationship between their Monthly Charges and Tenure.",
+    "C":"C. There is no significant correlation between their Monthly Charges and Tenure.",
+    "Answer":"3"
+    },
+    {
+    "index":"26_T2_L_300",
+    "question":"Which of the following statements about telco customer churn is true?",
+    "A":"A. There is a positive relationship between their Monthly Charges and Tenure.",
+    "B":"B. There is a negative relationship between their Monthly Charges and Tenure.",
+    "C":"C. There is no significant correlation between their Monthly Charges and Tenure.",
+    "Answer":"3"
+    },
+    {
+    "index":"26_T2_M_100",
+    "question":"Which of the following statements about telco customer churn is true?",
+    "A":"A. There is a positive relationship between their Monthly Charges and Tenure.",
+    "B":"B. There is a negative relationship between their Monthly Charges and Tenure.",
+    "C":"C. There is no significant correlation between their Monthly Charges and Tenure.",
+    "Answer":"1"
+    },
+    {
+    "index":"26_T2_M_1k",
+    "question":"Which of the following statements about telco customer churn is true?",
+    "A":"A. There is a positive relationship between their Monthly Charges and Tenure.",
+    "B":"B. There is a negative relationship between their Monthly Charges and Tenure.",
+    "C":"C. There is no significant correlation between their Monthly Charges and Tenure.",
+    "Answer":"1"
+    },
+    {
+    "index":"26_T2_M_300",
+    "question":"Which of the following statements about telco customer churn is true?",
+    "A":"A. There is a positive relationship between their Monthly Charges and Tenure.",
+    "B":"B. There is a negative relationship between their Monthly Charges and Tenure.",
+    "C":"C. There is no significant correlation between their Monthly Charges and Tenure.",
+    "Answer":"1"
+    },
+    {
+    "index":"28_T2_H_100",
+    "question":"Which of the following statements about the health indexes is true?",
+    "A":"A. There is a positive relationship between Average Glucose Level and Body Mass Index.",
+    "B":"B. There is a negative relationship between Average Glucose Level and Body Mass Index.",
+    "C":"C. There is no significant correlation between Average Glucose Level and Body Mass Index.",
+    "Answer":"1"
+    },
+    {
+    "index":"28_T2_H_1k",
+    "question":"Which of the following statements about the health indexes is true?",
+    "A":"A. There is a positive relationship between Average Glucose Level and Body Mass Index.",
+    "B":"B. There is a negative relationship between Average Glucose Level and Body Mass Index.",
+    "C":"C. There is no significant correlation between Average Glucose Level and Body Mass Index.",
+    "Answer":"1"
+    },
+    {
+    "index":"28_T2_H_300",
+    "question":"Which of the following statements about the health indexes is true?",
+    "A":"A. There is a positive relationship between Average Glucose Level and Body Mass Index.",
+    "B":"B. There is a negative relationship between Average Glucose Level and Body Mass Index.",
+    "C":"C. There is no significant correlation between Average Glucose Level and Body Mass Index.",
+    "Answer":"1"
+    },
+    {
+    "index":"28_T2_L_100",
+    "question":"Which of the following statements about the health indexes is true?",
+    "A":"A. There is a positive relationship between Average Glucose Level and Body Mass Index.",
+    "B":"B. There is a negative relationship between Average Glucose Level and Body Mass Index.",
+    "C":"C. There is no significant correlation between Average Glucose Level and Body Mass Index.",
+    "Answer":"3"
+    },
+    {
+    "index":"28_T2_L_1k",
+    "question":"Which of the following statements about the health indexes is true?",
+    "A":"A. There is a positive relationship between Average Glucose Level and Body Mass Index.",
+    "B":"B. There is a negative relationship between Average Glucose Level and Body Mass Index.",
+    "C":"C. There is no significant correlation between Average Glucose Level and Body Mass Index.",
+    "Answer":"3"
+    },
+    {
+    "index":"28_T2_L_300",
+    "question":"Which of the following statements about the health indexes is true?",
+    "A":"A. There is a positive relationship between Average Glucose Level and Body Mass Index.",
+    "B":"B. There is a negative relationship between Average Glucose Level and Body Mass Index.",
+    "C":"C. There is no significant correlation between Average Glucose Level and Body Mass Index.",
+    "Answer":"3"
+    },
+    {
+    "index":"28_T2_M_100",
+    "question":"Which of the following statements about the health indexes is true?",
+    "A":"A. There is a positive relationship between Average Glucose Level and Body Mass Index.",
+    "B":"B. There is a negative relationship between Average Glucose Level and Body Mass Index.",
+    "C":"C. There is no significant correlation between Average Glucose Level and Body Mass Index.",
+    "Answer":"1"
+    },
+    {
+    "index":"28_T2_M_1k",
+    "question":"Which of the following statements about the health indexes is true?",
+    "A":"A. There is a positive relationship between Average Glucose Level and Body Mass Index.",
+    "B":"B. There is a negative relationship between Average Glucose Level and Body Mass Index.",
+    "C":"C. There is no significant correlation between Average Glucose Level and Body Mass Index.",
+    "Answer":"1"
+    },
+    {
+    "index":"28_T2_M_300",
+    "question":"Which of the following statements about the health indexes is true?",
+    "A":"A. There is a positive relationship between Average Glucose Level and Body Mass Index.",
+    "B":"B. There is a negative relationship between Average Glucose Level and Body Mass Index.",
+    "C":"C. There is no significant correlation between Average Glucose Level and Body Mass Index.",
+    "Answer":"1"
+    },
+    {
+    "index":"29_T2_H_100",
+    "question":"Which of the following statements about bank loan customers is true?",
+    "A":"A. There is a positive relationship between their Income and Mortgage.",
+    "B":"B. There is a negative relationship between their Income and Mortgage.",
+    "C":"C. There is no significant correlation between their Income and Mortgage.",
+    "Answer":"1"
+    },
+    {
+    "index":"29_T2_H_1k",
+    "question":"Which of the following statements about bank loan customers is true?",
+    "A":"A. There is a positive relationship between their Income and Mortgage.",
+    "B":"B. There is a negative relationship between their Income and Mortgage.",
+    "C":"C. There is no significant correlation between their Income and Mortgage.",
+    "Answer":"1"
+    },
+    {
+    "index":"29_T2_H_300",
+    "question":"Which of the following statements about bank loan customers is true?",
+    "A":"A. There is a positive relationship between their Income and Mortgage.",
+    "B":"B. There is a negative relationship between their Income and Mortgage.",
+    "C":"C. There is no significant correlation between their Income and Mortgage.",
+    "Answer":"1"
+    },
+    {
+    "index":"29_T2_L_100",
+    "question":"Which of the following statements about bank loan customers is true?",
+    "A":"A. There is a positive relationship between their Income and Mortgage.",
+    "B":"B. There is a negative relationship between their Income and Mortgage.",
+    "C":"C. There is no significant correlation between their Income and Mortgage.",
+    "Answer":"3"
+    },
+    {
+    "index":"29_T2_L_1k",
+    "question":"Which of the following statements about bank loan customers is true?",
+    "A":"A. There is a positive relationship between their Income and Mortgage.",
+    "B":"B. There is a negative relationship between their Income and Mortgage.",
+    "C":"C. There is no significant correlation between their Income and Mortgage.",
+    "Answer":"3"
+    },
+    {
+    "index":"29_T2_L_300",
+    "question":"Which of the following statements about bank loan customers is true?",
+    "A":"A. There is a positive relationship between their Income and Mortgage.",
+    "B":"B. There is a negative relationship between their Income and Mortgage.",
+    "C":"C. There is no significant correlation between their Income and Mortgage.",
+    "Answer":"3"
+    },
+    {
+    "index":"29_T2_M_100",
+    "question":"Which of the following statements about bank loan customers is true?",
+    "A":"A. There is a positive relationship between their Income and Mortgage.",
+    "B":"B. There is a negative relationship between their Income and Mortgage.",
+    "C":"C. There is no significant correlation between their Income and Mortgage.",
+    "Answer":"1"
+    },
+    {
+    "index":"29_T2_M_1k",
+    "question":"Which of the following statements about bank loan customers is true?",
+    "A":"A. There is a positive relationship between their Income and Mortgage.",
+    "B":"B. There is a negative relationship between their Income and Mortgage.",
+    "C":"C. There is no significant correlation between their Income and Mortgage.",
+    "Answer":"1"
+    },
+    {
+    "index":"29_T2_M_300",
+    "question":"Which of the following statements about bank loan customers is true?",
+    "A":"A. There is a positive relationship between their Income and Mortgage.",
+    "B":"B. There is a negative relationship between their Income and Mortgage.",
+    "C":"C. There is no significant correlation between their Income and Mortgage.",
+    "Answer":"1"
+    },
+    {
+    "index":"30_T2_H_100",
+    "question":"Which of the following statements about Canberra is true?",
+    "A":"A. There is a positive relationship between Temperature and Humidity there.",
+    "B":"B. There is a negative relationship between Temperature and Humidity there.",
+    "C":"C. There is no significant correlation between Temperature and Humidity there.",
+    "Answer":"2"
+    },
+    {
+    "index":"30_T2_H_1k",
+    "question":"Which of the following statements about Canberra is true?",
+    "A":"A. There is a positive relationship between Temperature and Humidity there.",
+    "B":"B. There is a negative relationship between Temperature and Humidity there.",
+    "C":"C. There is no significant correlation between Temperature and Humidity there.",
+    "Answer":"2"
+    },
+    {
+    "index":"30_T2_H_300",
+    "question":"Which of the following statements about Canberra is true?",
+    "A":"A. There is a positive relationship between Temperature and Humidity there.",
+    "B":"B. There is a negative relationship between Temperature and Humidity there.",
+    "C":"C. There is no significant correlation between Temperature and Humidity there.",
+    "Answer":"2"
+    },
+    {
+    "index":"30_T2_L_100",
+    "question":"Which of the following statements about Canberra is true?",
+    "A":"A. There is a positive relationship between Temperature and Humidity there.",
+    "B":"B. There is a negative relationship between Temperature and Humidity there.",
+    "C":"C. There is no significant correlation between Temperature and Humidity there.",
+    "Answer":"3"
+    },
+    {
+    "index":"30_T2_L_1k",
+    "question":"Which of the following statements about Canberra is true?",
+    "A":"A. There is a positive relationship between Temperature and Humidity there.",
+    "B":"B. There is a negative relationship between Temperature and Humidity there.",
+    "C":"C. There is no significant correlation between Temperature and Humidity there.",
+    "Answer":"3"
+    },
+    {
+    "index":"30_T2_L_300",
+    "question":"Which of the following statements about Canberra is true?",
+    "A":"A. There is a positive relationship between Temperature and Humidity there.",
+    "B":"B. There is a negative relationship between Temperature and Humidity there.",
+    "C":"C. There is no significant correlation between Temperature and Humidity there.",
+    "Answer":"3"
+    },
+    {
+    "index":"30_T2_M_100",
+    "question":"Which of the following statements about Canberra is true?",
+    "A":"A. There is a positive relationship between Temperature and Humidity there.",
+    "B":"B. There is a negative relationship between Temperature and Humidity there.",
+    "C":"C. There is no significant correlation between Temperature and Humidity there.",
+    "Answer":"2"
+    },
+    {
+    "index":"30_T2_M_1k",
+    "question":"Which of the following statements about Canberra is true?",
+    "A":"A. There is a positive relationship between Temperature and Humidity there.",
+    "B":"B. There is a negative relationship between Temperature and Humidity there.",
+    "C":"C. There is no significant correlation between Temperature and Humidity there.",
+    "Answer":"2"
+    },
+    {
+    "index":"30_T2_M_300",
+    "question":"Which of the following statements about Canberra is true?",
+    "A":"A. There is a positive relationship between Temperature and Humidity there.",
+    "B":"B. There is a negative relationship between Temperature and Humidity there.",
+    "C":"C. There is no significant correlation between Temperature and Humidity there.",
+    "Answer":"2"
+    }
+    ]
+    }
