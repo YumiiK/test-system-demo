@@ -23,7 +23,8 @@ with open('task2.json',mode='r') as f:
         for j in range(len(all_t2)):
             if all_t2[j]["index"]==i:
                 print(all_t2[j]["index"])
-                ques = Question(all_t2[j]["question"],[all_t2[j]["A"],all_t2[j]["B"],all_t2[j]["C"]],all_t2[j]["Answer"])
+                img_filename= "/static/img/"+ i + ".png"
+                ques = Question(all_t2[j]["question"],[all_t2[j]["A"],all_t2[j]["B"],all_t2[j]["C"]],all_t2[j]["Answer"],img_filename)
                 trial.questions.append(ques)
                 continue
 
@@ -34,15 +35,7 @@ test = Survey(
     "Test",
     "In this section, you have 45 questions to answer. After every 15 questions, you can take a rest, then continue. "
     "Begin the formal test now!",
-    [
-        Question("Do you ever dream about code?"),
-        Question("Do you ever have nightmares about code?"),
-        Question("Do you prefer porcupines or hedgehogs?",
-                 ["Porcupines", "Hedgehogs"]),
-        Question("Which is the worst function name, and why?",
-                 ["do_stuff()", "run_me()", "wtf()"],
-                 allow_text=True),
-    ]
+    []
 )
 
 
@@ -51,6 +44,22 @@ surveys = {
     "trial": trial,
     "test": test,
 }
+
+# def return_img_stream(img_local_path):
+#   """
+#   工具函数:
+#   获取本地图片流
+#   :param img_local_path:文件单张图片的本地绝对路径
+#   :return: 图片流
+#   """
+#   import base64
+#   img_stream = ''
+#   with open(img_local_path, 'r') as img_f:
+#     img_stream = img_f.read()
+    
+#     img_stream = base64.b64encode(img_stream)
+#   return img_stream
+
 
 @app.route('/')
 def home():
@@ -71,7 +80,7 @@ def start_survey(survey_picked=None):
     return render_template('start-survey.html', name=survey_picked, title=surveys[survey_picked].title, instructions=surveys[survey_picked].instructions)
 
 
-@app.route('/trial/<int:question_num>', methods=["POST"])
+@app.route('/trial/<int:question_num>', methods=["POST","GET"])
 def trial(question_num):
     survey_picked = session['survey_name']
     if question_num != 0:
@@ -92,8 +101,10 @@ def trial(question_num):
             flash(answer, 'answer')
             flash(comment, 'comment')
         return redirect('/start-survey/test')
+    
 
-    return render_template('trial.html', next_id=question_num + 1, question=surveys[survey_picked].questions[question_num].question, choices=surveys[survey_picked].questions[question_num].choices, textbox=surveys[survey_picked].questions[question_num].allow_text)
+
+    return render_template('trial.html', next_id=question_num + 1, question=surveys[survey_picked].questions[question_num].question, choices=surveys[survey_picked].questions[question_num].choices,scatterimg = surveys[survey_picked].questions[question_num].image,  textbox=surveys[survey_picked].questions[question_num].allow_text)
 
 
 @app.route('/test/<int:question_num>', methods=["POST"])
