@@ -1,3 +1,10 @@
+body {
+  /*font-family: "benton-sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+  padding: 1em;
+  font-family: "Noto Sans SC";
+  font-weight: 100;
+}
+
 h1,
 h3 {
   text-align: center;
@@ -11,7 +18,7 @@ div {
 legend {
   background-color: #000;
   color: #fff;
-  padding: 3px 6px;
+  padding: 3px 15px 3px 15px;
 }
 
 .output {
@@ -20,4 +27,33 @@ legend {
 
 input {
   margin: 0.4rem;
+}
+
+.question {
+  display: inline-block;
+  float: left;
+  padding-top: 10%;
+}
+
+.plot {
+  display: inline-block;
+  float: left;
+}
+
+.testing {
+  box-sizing: border-box;
+  padding-right: 5em;
+  padding-left: 5em;
+}
+
+form {
+  line-height: 2em;
+}
+
+img {
+  width: 560px;
+}
+
+button {
+  padding: 5px 15px 5px 15px;
 }

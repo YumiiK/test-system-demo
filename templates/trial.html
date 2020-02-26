@@ -2,26 +2,36 @@
 {% block title %}Trial{% endblock %}
 
 {% block body %}
-    <form action='/trial/{{ next_id }}' , method="POST">
-        <fieldset>
-            <legend>{{ question }}</legend>
-            {% for choice in choices %}
-                <input type="radio" id="{{ choice }}" value="{{ choice }}" name="selection">
-                <label for="{{ choice }}">{{ choice }}</label><br/>
-            {% endfor %}
-            {% if textbox %}
-                <br>
-                <section>
-                    <label for="comments">Comments:</label>
-                    <br>
-                    <textarea id="comments" name="comments"></textarea>
-                </section>
-            {% endif %}
-            <button type="reset">Retry</button>
-            <button type="submit">Next</button>
-        </fieldset>
-    </form>
-    <img src="{{ scatterimg }}">
+    <h1 style="line-height: 0;padding-top: 8px;">Trial</h1>
+    <h3 style="line-height: 0;padding-top: 12px;">{{ next_id }}/3</h3>
+    <div class="testing">
+        <div class="plot">
+            <img src="{{ scatterimg }}">
+        </div>
+        <div class="question">
+            <form action='/trial/{{ next_id }}' , method="POST">
+                <fieldset>
+                    <legend>{{ question }}</legend>
+                    {% for choice in choices %}
+                        <input type="radio" id="{{ choice }}" value="{{ choice }}" name="selection">
+                        <label for="{{ choice }}">{{ choice }}</label><br/>
+                    {% endfor %}
+                    {% if textbox %}
+                        <br>
+                        <section>
+                            <label for="comments">Comments:</label>
+                            <br>
+                            <textarea id="comments" name="comments"></textarea>
+                        </section>
+                    {% endif %}
+                </fieldset>
+                <div style="float: right; padding-top: 20px;">
+                    <button type="reset" style="margin-right: 10px;">Retry</button>
+                    <button type="submit">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 {% endblock %}
 
