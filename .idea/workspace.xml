@@ -3,143 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7586b483-1d27-4d0d-9591-6286909d021a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/02_T1_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/02_T1_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/02_T1_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/02_T1_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/02_T1_M_1k_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/02_T1_M_1k_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/02_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/02_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/02_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/02_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/02_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/02_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/02_T3_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/02_T3_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/02_T3_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/02_T3_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/02_T3_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/02_T3_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/03_T1_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/03_T1_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/03_T1_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/03_T1_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/03_T1_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/03_T1_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/03_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/03_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/03_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/03_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/03_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/03_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/03_T3_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/03_T3_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/03_T3_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/03_T3_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/03_T3_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/03_T3_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/04_T1_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/04_T1_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/04_T1_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/04_T1_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/04_T1_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/04_T1_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/04_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/04_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/04_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/04_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/04_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/04_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/04_T3_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/04_T3_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/04_T3_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/04_T3_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/04_T3_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/04_T3_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/05_T1_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/05_T1_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/05_T1_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/05_T1_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/05_T1_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/05_T1_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/05_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/05_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/05_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/05_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/05_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/05_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/05_T3_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/05_T3_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/05_T3_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/05_T3_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/05_T3_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/05_T3_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/06_T1_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/06_T1_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/06_T1_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/06_T1_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/06_T1_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/06_T1_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/06_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/06_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/06_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/06_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/06_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/06_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/06_T3_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/06_T3_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/06_T3_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/06_T3_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/06_T3_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/06_T3_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/16_T2_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/16_T2_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/16_T2_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/16_T2_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/16_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/16_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/16_T2_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/16_T2_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/16_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/16_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/16_T2_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/16_T2_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/16_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/16_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/16_T2_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/16_T2_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/16_T2_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/16_T2_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/17_T2_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/17_T2_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/17_T2_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/17_T2_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/17_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/17_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/17_T2_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/17_T2_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/17_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/17_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/17_T2_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/17_T2_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/17_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/17_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/17_T2_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/17_T2_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/17_T2_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/17_T2_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/20_T2_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/20_T2_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/20_T2_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/20_T2_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/20_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/20_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/20_T2_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/20_T2_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/20_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/20_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/20_T2_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/20_T2_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/20_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/20_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/20_T2_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/20_T2_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/20_T2_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/20_T2_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/23_T2_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/23_T2_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/23_T2_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/23_T2_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/23_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/23_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/23_T2_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/23_T2_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/23_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/23_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/23_T2_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/23_T2_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/23_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/23_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/23_T2_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/23_T2_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/23_T2_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/23_T2_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/24_T2_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/24_T2_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/24_T2_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/24_T2_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/24_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/24_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/24_T2_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/24_T2_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/24_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/24_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/24_T2_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/24_T2_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/24_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/24_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/24_T2_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/24_T2_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/24_T2_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/24_T2_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/25_T2_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/25_T2_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/25_T2_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/25_T2_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/25_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/25_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/25_T2_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/25_T2_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/25_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/25_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/25_T2_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/25_T2_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/25_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/25_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/25_T2_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/25_T2_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/25_T2_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/25_T2_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/26_T2_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/26_T2_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/26_T2_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/26_T2_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/26_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/26_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/26_T2_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/26_T2_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/26_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/26_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/26_T2_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/26_T2_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/26_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/26_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/26_T2_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/26_T2_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/26_T2_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/26_T2_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/28_T2_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/28_T2_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/28_T2_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/28_T2_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/28_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/28_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/28_T2_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/28_T2_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/28_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/28_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/28_T2_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/28_T2_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/28_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/28_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/28_T2_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/28_T2_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/28_T2_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/28_T2_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/29_T2_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/29_T2_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/29_T2_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/29_T2_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/29_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/29_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/29_T2_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/29_T2_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/29_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/29_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/29_T2_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/29_T2_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/29_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/29_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/29_T2_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/29_T2_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/29_T2_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/29_T2_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/30_T2_H_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/30_T2_H_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/30_T2_H_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/30_T2_H_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/30_T2_H_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/30_T2_H_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/30_T2_L_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/30_T2_L_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/30_T2_L_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/30_T2_L_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/30_T2_L_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/30_T2_L_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/30_T2_M_100.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/30_T2_M_100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/30_T2_M_1k.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/30_T2_M_1k.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/30_T2_M_300.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/30_T2_M_300.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/survey.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/survey.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/thanks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/thanks.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/trial.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/trial.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -212,6 +78,7 @@
       <updated>1582697102256</updated>
       <workItem from="1582697105159" duration="6693000" />
       <workItem from="1582720581012" duration="6592000" />
+      <workItem from="1582774260823" duration="4959000" />
     </task>
     <servers />
   </component>
@@ -233,6 +100,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/test_system$test_system.coverage" NAME="test-system Coverage Results" MODIFIED="1582645888388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/test_system_demo$test_system.coverage" NAME="test-system Coverage Results" MODIFIED="1582727411596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test_system_demo$test_system.coverage" NAME="test-system Coverage Results" MODIFIED="1582778343384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

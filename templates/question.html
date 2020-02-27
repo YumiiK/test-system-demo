@@ -1,27 +1,34 @@
 {% extends 'base.html' %}
-  {% block title %}Question{% endblock %}
+{% block title %}Question{% endblock %}
 
-  {% block body %}
-  <form action='/test/{{next_id}}', method="POST">
-    <fieldset>
-      <legend>{{question}}</legend>
-      {% for choice in choices %}
-      <input type="radio" id="{{choice}}" value="{{choice}}" name="selection">
-      <label for="{{choice}}">{{choice}}</label><br />
-      {% endfor %}
-      {% if textbox %}
-      <br>
-      <section>
-          <label for="comments">Comments:</label>
-          <br>
-          <textarea id="comments" name="comments"></textarea>
-      </section>
-      {% endif %}
-      <button type = "submit">Next Question</button>
-    </fieldset>
-  </form>
-  
-
-<img src="{{ scatterimg }}">
-  
+{% block body %}
+    <h1 style="line-height: 0;padding-top: 8px;">Test</h1>
+    <h3 style="line-height: 0;padding-top: 12px;">{{ next_id }}/15</h3>
+    <div class="testing">
+        <div class="plot">
+            <img src="{{ scatterimg }}">
+        </div>
+        <div class="question">
+            <form action='/test/{{ next_id }}' , method="POST">
+                <fieldset>
+                    <legend>{{ question }}</legend>
+                    {% for choice in choices %}
+                        <input type="radio" id="{{ choice }}" value="{{ choice }}" name="selection">
+                        <label for="{{ choice }}">{{ choice }}</label><br/>
+                    {% endfor %}
+                    {#                {% if textbox %}#}
+                    {#                    <br>#}
+                    {#                    <section>#}
+                    {#                        <label for="comments">Comments:</label>#}
+                    {#                        <br>#}
+                    {#                        <textarea id="comments" name="comments"></textarea>#}
+                    {#                    </section>#}
+                    {#                {% endif %}#}
+                </fieldset>
+                <div style="float: right; padding-top: 20px;">
+                    <button type="submit">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
 {% endblock %}
