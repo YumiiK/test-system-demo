@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+  {% block title %}break{% endblock %}
+
+  {% block body %}
+  <h1>Break</h1>
+  <h3>You can have a break, and continue whenever you want.</h3>
+  <div id="start-survey">
+    <form action="/test/{{ test_id }}/0" method="POST">
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+  {% endblock %}
