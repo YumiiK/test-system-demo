@@ -1,20 +1,20 @@
 import json
 
+
 class Question:
     """Question on a questionnaire."""
 
-    def __init__(self, question, choices=None,answer=None, image=None,allow_text=False):
+    def __init__(self, index, question, choices=None, answer=None, image=None, allow_text=False):
         """Create question (assume Yes/No for choices."""
 
         if not choices:
             choices = ["Yes", "No"]
-
+        self.qindex = index
         self.question = question
         self.choices = choices
         self.answer = answer
         self.image = image
         self.allow_text = allow_text
-        
 
 
 class Survey:
@@ -27,10 +27,6 @@ class Survey:
         self.instructions = instructions
         self.questions = questions
 
-
-
-                    
-                    
 # trial = Survey(
 #     "Trial",
 #     "In this section, we have prepared several questions to familiarize you with them. After you choose the "
@@ -57,7 +53,6 @@ class Survey:
 #                  allow_text=True),
 #     ]
 # )
-
 
 
 # surveys = {

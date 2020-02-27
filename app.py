@@ -1,10 +1,12 @@
-from flask import Flask, json, request, session, render_template, redirect, flash, jsonify, make_response
+from flask import Flask, json, request, session, render_template, redirect, flash, jsonify, make_response, g
 # from flask_debugtoolbar import DebugToolbarExtension
 from surveys import Question, Survey
 import random
 
 app = Flask(__name__)
 app.secret_key = "SECRET"
+
+result_file = open('result.json', 'w')
 
 # debug = DebugToolbarExtension(app)
 
@@ -26,7 +28,8 @@ with open('task2.json', mode='r') as f:
             if all_t2[j]["index"] == i:
                 print(all_t2[j]["index"])
                 img_filename = "/static/img/" + i + ".png"
-                ques = Question(all_t2[j]["question"], [all_t2[j]["A"], all_t2[j]["B"], all_t2[j]["C"]],
+                ques = Question(all_t2[j]["index"], all_t2[j]["question"],
+                                [all_t2[j]["A"], all_t2[j]["B"], all_t2[j]["C"]],
                                 all_t2[j]["Answer"], img_filename)
                 trial.questions.append(ques)
                 continue
@@ -70,7 +73,8 @@ def re_init():
         random.shuffle(pick_num)
         for i in range(len(all_t2)):
             test_img_filename = "/static/img/" + all_t2[i]["index"] + ".png"
-            ch = Question(all_t2[i]["question"], [all_t2[i]["A"], all_t2[i]["B"], all_t2[i]["C"]], all_t2[i]["Answer"],
+            ch = Question(all_t2[i]["index"], all_t2[i]["question"], [all_t2[i]["A"], all_t2[i]["B"], all_t2[i]["C"]],
+                          all_t2[i]["Answer"],
                           test_img_filename)
             if all_t2[i]["index"][0:2] == n and all_t2[i]["index"][6:7] == "M" and all_t2[i]["index"][8:10] == "1k":
                 ch_all[pick_num[0]].append(ch)
@@ -164,6 +168,9 @@ def trial(question_num):
                            textbox=surveys[survey_picked].questions[question_num].allow_text)
 
 
+Test_No = 0
+
+
 @app.route('/test/<int:test_num>/<int:question_num_>', methods=["POST"])
 def question(test_num, question_num_):
     global set1
@@ -171,8 +178,8 @@ def question(test_num, question_num_):
     if set1 == 0:
         re_init()
     test.questions = assign_test(set1)
-    print("???????????????????")
-    print(len(test.questions))
+    print("??????????")
+    print(set2)
     set2 = set2 + 1
     if set2 == 15:
         set2 = 0
@@ -180,6 +187,16 @@ def question(test_num, question_num_):
     if set1 == 9:
         set1 = 0
 
+    global Test_No
+    global result_file
+
+    if test_num == 0 and question_num_ == 0:
+        result_file = open('result_%s.json' % Test_No, 'w+', encoding="utf-8")
+        result_file.write("{\n\"No.\":\"%s\",\n\"QA\":[" % Test_No)
+        result_file.close()
+
+    print("AAAAA")
+    print(question_num_)
     survey_picked = session['survey_name']
     if question_num_ != 0:
         selection = request.form.get("selection")
@@ -189,6 +206,30 @@ def question(test_num, question_num_):
         answers = session[survey_picked]
         answers[question_num_ - 1] = answer
         session[survey_picked] = answers
+        if selection[0:1] == 'A':
+            trans_answer = "1"
+        if selection[0:1] == 'B':
+            trans_answer = "2"
+        if selection[0:1] == 'C':
+            trans_answer = "3"
+        if_right = "y"
+        if trans_answer == test.questions[question_num_ - 1].answer:
+            if_right = "n"
+        if question_num_ <= 14 or test_num < 2:
+            print("***********************************")
+            result_file = open('result_%s.json' % Test_No, 'a+', encoding="utf-8")
+            result_file.write("{\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"}," % (
+            test.questions[question_num_ - 1].qindex, test.questions[question_num_ - 1].answer, trans_answer, if_right))
+            result_file.close()
+
+        if question_num_ == 15 and test_num == 2:
+            result_file = open('result_%s.json' % Test_No, 'a+', encoding="utf-8")
+            result_file.write("{\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"}]}" % (
+            test.questions[question_num_ - 1].qindex, test.questions[question_num_ - 1].answer, trans_answer, if_right))
+            result_file.close()
+
+            Test_No = Test_No + 1
+
     if question_num_ >= len(surveys[survey_picked].questions):
         for i in range(len(surveys[survey_picked].questions)):
             question = surveys[survey_picked].questions[i].question
@@ -202,7 +243,7 @@ def question(test_num, question_num_):
         if test_num >= 2:
             return redirect('/thanks')
         else:
-            return render_template('break.html', test_id=test_num+1)
+            return render_template('break.html', test_id=test_num + 1)
 
     return render_template('question.html', next_id=question_num_ + 1, test_id=test_num,
                            question=surveys[survey_picked].questions[question_num_].question,
