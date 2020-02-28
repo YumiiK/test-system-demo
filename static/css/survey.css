@@ -32,7 +32,7 @@ input {
 .question {
   display: inline-block;
   float: left;
-  padding-top: 10%;
+  padding-top: 6%;
 }
 
 .plot {
@@ -56,4 +56,8 @@ img {
 
 button {
   padding: 5px 15px 5px 15px;
+}
+
+p {
+  font: 20px "Microsoft Yahei";font-weight: bold;
 }

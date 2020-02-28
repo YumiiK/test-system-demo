@@ -1,24 +1,17 @@
-/*!
- * LABELAUTY jQuery Plugin Styles
- *
- * @file: jquery-labelauty.css
- * @author: Francisco Neves (@fntneves)
- * @site: www.francisconeves.com
- * @license: MIT License
- */
+/* for right style*/
 
 /* Prevent text and blocks selection */
-input.labelauty + label ::selection { background-color: rgba(255, 255, 255, 0); }
-input.labelauty + label ::-moz-selection { background-color: rgba(255, 255, 255, 0); }
+input.rightstyle + label ::selection { background-color: rgba(255, 255, 255, 0); }
+input.rightstyle + label ::-moz-selection { background-color: rgba(255, 255, 255, 0); }
 
 /* Hide original checkboxes. They are ugly! */
-input.labelauty { display: none !important; }
+input.rightstyle { display: none !important; }
 
 /*
  * Let's style the input
  * Feel free to work with it as you wish!
  */
-input.labelauty + label
+input.rightstyle + label
 {
 	display: table;
 	font-size: 20px;
@@ -45,8 +38,8 @@ input.labelauty + label
 
 /* Stylish text inside label */
 
-input.labelauty + label > span.labelauty-unchecked,
-input.labelauty + label > span.labelauty-checked
+input.rightstyle + label > span.rightstyle-unchecked,
+input.rightstyle + label > span.rightstyle-checked
 {
 	display: inline-block;
 	line-height: 25px;
@@ -55,8 +48,8 @@ input.labelauty + label > span.labelauty-checked
 
 /* Stylish icons inside label */
 
-/* input.labelauty + label > span.labelauty-unchecked-image,
-input.labelauty + label > span.labelauty-checked-image
+input.rightstyle + label > span.rightstyle-unchecked-image,
+input.rightstyle + label > span.rightstyle-checked-image
 {
 	display: inline-block;
 	width: 10px;
@@ -69,94 +62,94 @@ input.labelauty + label > span.labelauty-checked-image
 	-moz-transition: background-image 0.5s linear;
 	-webkit-transition: background-image 0.5s linear;
 	-o-transition: background-image 0.5s linear;
-} */
+}
 
-/* When there's a label, add a little margin to the left
-input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked,
-input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked
+/* When there's a label, add a little margin to the left */
+input.rightstyle + label > span.rightstyle-unchecked-image + span.rightstyle-unchecked,
+input.rightstyle + label > span.rightstyle-checked-image + span.rightstyle-checked
 {
 	margin-left: 1px;
-} */
+}
 
 /* When not Checked */
-input.labelauty:not(:checked):not([disabled]) + label:hover
+input.rightstyle:not(:checked):not([disabled]) + label:hover
 {
 	background-color: #eaeaea;
 	color: #2c2b2b;
 }
-/* input.labelauty:not(:checked) + label > span.labelauty-checked-image
+input.rightstyle:not(:checked) + label > span.rightstyle-checked-image
 {
 	display: none;
-} */
+}
 
-input.labelauty:not(:checked) + label > span.labelauty-checked
+input.rightstyle:not(:checked) + label > span.rightstyle-checked
 {
 	display: none;
 }
 
 /* When Checked */
-input.labelauty:checked + label
+input.rightstyle:checked + label
 {
-	background-color: #3498db;
+	background-color:rgb(219, 26, 26);
 	color: #ffffff;
 }
 
-input.labelauty:checked:not([disabled]) + label:hover
+input.rightstyle:checked:not([disabled]) + label:hover
 {
-	background-color: #72c5fd;
+	background-color: rgb(33, 151, 53);
 }
-/* input.labelauty:checked + label > span.labelauty-unchecked-image
-{
-	display: none;
-} */
-
-input.labelauty:checked + label > span.labelauty-unchecked
+input.rightstyle:checked + label > span.rightstyle-unchecked-image
 {
 	display: none;
 }
 
-input.labelauty:checked + label > span.labelauty-checked
+input.rightstyle:checked + label > span.rightstyle-unchecked
 {
-	display: inline-block;
+	display: none;
 }
 
-input.labelauty.no-label:checked + label > span.labelauty-checked
+input.rightstyle:checked + label > span.rightstyle-checked
+{
+	display: none;
+}
+
+input.rightstyle.no-label:checked + label > span.rightstyle-checked
 {
 	display: block;
 }
 
 /* When Disabled */
-input.labelauty[disabled] + label
+input.rightstyle[disabled] + label
 {
 	opacity: 0.5;
 }
 
-/* Add a background to (un)checked images
-input.labelauty + label > span.labelauty-unchecked-image
+/* Add a background to (un)checked images */
+input.rightstyle + label > span.rightstyle-unchecked-image
 {
-	background-image: url( ../images/input-unchecked.png );
+	background-image: url( ../radio/images/input-unchecked.png );
 } 
 
-input.labelauty + label > span.labelauty-checked-image
+input.rightstyle + label > span.rightstyle-checked-image
 {
-	background-image: url( ../images/input-checked.png );
-} */
+	background-image: url( ../radio/images/input-checked.png );
+}
 
 
 
 
 /* Prevent text and blocks selection */
-input.labelauty + label ::selection { background-color: rgba(255, 255, 255, 0); }
-input.labelauty + label ::-moz-selection { background-color: rgba(255, 255, 255, 0); }
+input.rightstyle + label ::selection { background-color: rgba(255, 255, 255, 0); }
+input.rightstyle + label ::-moz-selection { background-color: rgba(255, 255, 255, 0); }
 
 /* Hide original checkboxes. They are ugly! */
-input.labelauty { display: none !important; }
+input.rightstyle { display: none !important; }
 
 /*
  * Let's style the input
  * Feel free to work with it as you wish!
  */
-input.labelauty + label
+input.rightstyle + label
 {
 	display: table;
 	font-size: 20px;
@@ -183,8 +176,8 @@ input.labelauty + label
 
 /* Stylish text inside label */
 
-input.labelauty + label > span.labelauty-unchecked,
-input.labelauty + label > span.labelauty-checked
+input.rightstyle + label > span.rightstyle-unchecked,
+input.rightstyle + label > span.rightstyle-checked
 {
 	display: inline-block;
 	line-height: 25px;
@@ -193,8 +186,8 @@ input.labelauty + label > span.labelauty-checked
 
 /* Stylish icons inside label */
 
-/* input.labelauty + label > span.labelauty-unchecked-image,
-input.labelauty + label > span.labelauty-checked-image
+input.rightstyle + label > span.rightstyle-unchecked-image,
+input.rightstyle + label > span.rightstyle-checked-image
 {
 	display: inline-block;
 	width: 10px;
@@ -207,4 +200,4 @@ input.labelauty + label > span.labelauty-checked-image
 	-moz-transition: background-image 0.5s linear;
 	-webkit-transition: background-image 0.5s linear;
 	-o-transition: background-image 0.5s linear;
-} */
+}

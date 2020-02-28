@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
-{% block title %}Trial{% endblock %}
+{% block title %}Training{% endblock %}
 
 {% block body %}
-    <h1 style="line-height: 0;padding-top: 8px;">Trial</h1>
+    <h1 style="line-height: 0;padding-top: 8px;">Training</h1>
     <h3 style="line-height: 0;padding-top: 12px;">{{ next_id }}/3</h3>
     <div class="testing">
         <div class="plot">
@@ -10,11 +10,12 @@
         </div>
         <div class="question">
             <form action='/trial/{{ next_id }}' , method="POST">
-                <fieldset>
-                    <legend>{{ question }}</legend>
+{#                <fieldset>#}
+                    <p style="padding-inline-start: 40px;" >{{ question }}</p>
+{#                    <legend>{{ question }}</legend>#}
                     <ul class="dowebok">
                     {% for choice in choices %}
-                        <li><input type="radio" id="{{ choice }}" value="{{ choice }}" name="radio" data-labelauty="{{ choice }}" onclick="show_answer();"></li>
+                        <li><input type="radio" id="{{ choice }}" value="{{ choice }}" name="radio" data-labelauty="{{ choice }}" onclick="show_answer();"style="width: 728px;"></li>
                         <!-- <label for="{{ choice }}">{{ choice }}</label><br/> -->
                     {% endfor %}
                     </ul>
@@ -26,16 +27,18 @@
 {#                            <textarea id="comments" name="comments"></textarea>#}
 {#                        </section>#}
 {#                    {% endif %}#}
-                </fieldset>
-                <div style="float: right; padding-top: 20px;">
+{#                </fieldset>#}
+                <div style="float: right;">
+                    {% if next_id == 3 %}
                     <button type="reset" style="margin-right: 10px;">Retry</button>
+                    {% endif %}
                     <button type="submit">Next</button>
                 </div>
             </form>
         </div>
     </div>
-    
-    
+
+
     <script>
         function show_answer(){
             var r;
@@ -51,37 +54,40 @@
             if("{{ answer }}"=="4"){
                 r = "D"
             }
-            var chkObjs=null; 
+            var chkObjs=null;
             var right_ele;
             var x,y;
             var obj=document.getElementsByName("radio")
-            for (var i=0;i<obj.length;i++){ 
-                if(obj[i].checked){ 
+            for (var i=0;i<obj.length;i++){
+                if(obj[i].checked){
                     chkObjs=obj[i].value;    //获得选中选项
                     x = i;
-                } 
+                }
                 if(obj[i].value.substr(0,1)==r){
                     right_ele = obj;         //获得正确选项
                     y = i;
                 }
-            } 
+            }
             // for(i=0;i<laArr.length;i++){
             //     laArr[i].setAttribute("style", " background-color: #efefef");
 
             // }
-            
+
 
             if(x == y){
                 //alert("right");
-               
+
                 var laArr = document.getElementsByTagName("label");
                 for(i=0;i<laArr.length;i++){
                     if(laArr[i].getAttributeNode("for").value==obj[x].value){
                         //alert("get");
                         laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53)");
-                        break;
+                        {#break;#}
                     }
-                } 
+                    else {
+                        laArr[i].setAttribute("style", " background-color:#efefef;");
+                    }
+                }
 
             }
             else{
@@ -89,22 +95,24 @@
                 var laArr = document.getElementsByTagName("label");
                 for(i=0;i<laArr.length;i++){
                     if(laArr[i].getAttributeNode("for").value==obj[x].value){
-                        
-                        laArr[i].setAttribute("style", " background-color:rgb(219, 26, 26);");
-                        
-                    }
-                    if(laArr[i].getAttributeNode("for").value==obj[y].value){
-                        
-                        laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53);color:#ffffff;");
-                        
-                    }
 
-                } 
+                        laArr[i].setAttribute("style", " background-color:rgb(219, 26, 26);");
+
+                    }
+                    else if(laArr[i].getAttributeNode("for").value==obj[y].value){
+
+                        laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53);color:#ffffff;");
+
+                    }
+                    else {
+                        laArr[i].setAttribute("style", " background-color:#efefef;");
+                    }
+                }
             }
-    
+
         }
     </script>
-    
+
 
 {% endblock %}
 

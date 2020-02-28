@@ -10,7 +10,7 @@ result_file = open('result.json', 'w')
 
 # debug = DebugToolbarExtension(app)
 
-trial = Survey("Trial",
+trial = Survey("Training",
                "In this section, we have prepared several questions to familiarize you with them. After you choose the "
                "answer, the correct answer will appear.",
                []
@@ -142,7 +142,7 @@ def start_survey(survey_picked=None):
 def trial(question_num):
     survey_picked = session['survey_name']
     if question_num != 0:
-        selection = request.form.get("selection")
+        selection = request.form.get("radio")
         comments = request.form.get("comments", "N/A")
         answer = (selection, comments)
         print(answer)
@@ -199,7 +199,7 @@ def question(test_num, question_num_):
     print(question_num_)
     survey_picked = session['survey_name']
     if question_num_ != 0:
-        selection = request.form.get("selection")
+        selection = request.form.get("radio")
         comments = request.form.get("comments", "N/A")
         answer = (selection, comments)
         print(answer)
@@ -212,9 +212,9 @@ def question(test_num, question_num_):
             trans_answer = "2"
         if selection[0:1] == 'C':
             trans_answer = "3"
-        if_right = "y"
+        if_right = "n"
         if trans_answer == test.questions[question_num_ - 1].answer:
-            if_right = "n"
+            if_right = "y"
         if question_num_ <= 14 or test_num < 2:
             print("***********************************")
             result_file = open('result_%s.json' % Test_No, 'a+', encoding="utf-8")

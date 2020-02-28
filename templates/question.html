@@ -15,11 +15,11 @@
         </div>
         <div class="question">
             <form action='/test/{{ test_id }}/{{ next_id }}' , method="POST", id = "attr">
-                <fieldset>
-                    <legend>{{ question }}</legend>
+{#                <fieldset>#}
+                    <p style="padding-inline-start: 40px;" >{{ question }}</p>
                     <ul class="dowebok">
                     {% for choice in choices %}
-                        <li><input type="radio" id="{{ choice }}" value="{{ choice }}" name="radio" data-labelauty="{{ choice }}" onclick = "MvcSubmit();" ></li>
+                        <li><input type="radio" id="{{ choice }}" value="{{ choice }}" name="radio" data-labelauty="{{ choice }}" onclick = "MvcSubmit();" style="width: 728px;" ></li>
                         <!-- <label for="{{ choice }}">{{ choice }}</label><br/> -->
                     {% endfor %}
                     </ul>
@@ -31,18 +31,18 @@
                     {#                        <textarea id="comments" name="comments"></textarea>#}
                     {#                    </section>#}
                     {#                {% endif %}#}
-                </fieldset>
-                <div style="float: right; padding-top: 20px;">
-                    <button id="btn_sumbit" type="submit"  >Next</button>
-                </div>
+{#                </fieldset>#}
+{#                <div style="float: right;">#}
+{#                    <button id="btn_sumbit" type="submit"  >Next</button>#}
+{#                </div>#}
             </form>
         </div>
     </div>
 
     <script>
-
         function MvcSubmit() {
-            document.getElementById('btn_sumbit').click();
+            var form = document.getElementById('attr');
+            form.submit();
         }
     </script>
 
