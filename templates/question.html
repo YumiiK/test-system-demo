@@ -2,6 +2,11 @@
 {% block title %}Question{% endblock %}
 
 {% block body %}
+
+
+
+
+
     <h1 style="line-height: 0;padding-top: 8px;">Test</h1>
     <h3 style="line-height: 0;padding-top: 12px;">{{ next_id }}/15</h3>
     <div class="testing">
@@ -9,13 +14,15 @@
             <img src="{{ scatterimg }}">
         </div>
         <div class="question">
-            <form action='/test/{{ test_id }}/{{ next_id }}' , method="POST">
+            <form action='/test/{{ test_id }}/{{ next_id }}' , method="POST", id = "attr">
                 <fieldset>
                     <legend>{{ question }}</legend>
+                    <ul class="dowebok">
                     {% for choice in choices %}
-                        <input type="radio" id="{{ choice }}" value="{{ choice }}" name="selection">
-                        <label for="{{ choice }}">{{ choice }}</label><br/>
+                        <li><input type="radio" id="{{ choice }}" value="{{ choice }}" name="radio" data-labelauty="{{ choice }}" onclick = "MvcSubmit();" ></li>
+                        <!-- <label for="{{ choice }}">{{ choice }}</label><br/> -->
                     {% endfor %}
+                    </ul>
                     {#                {% if textbox %}#}
                     {#                    <br>#}
                     {#                    <section>#}
@@ -26,9 +33,20 @@
                     {#                {% endif %}#}
                 </fieldset>
                 <div style="float: right; padding-top: 20px;">
-                    <button type="submit">Next</button>
+                    <button id="btn_sumbit" type="submit"  >Next</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <script>
+
+        function MvcSubmit() {
+            document.getElementById('btn_sumbit').click();
+        }
+    </script>
+
+
 {% endblock %}
+
+

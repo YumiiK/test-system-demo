@@ -12,10 +12,12 @@
             <form action='/trial/{{ next_id }}' , method="POST">
                 <fieldset>
                     <legend>{{ question }}</legend>
+                    <ul class="dowebok">
                     {% for choice in choices %}
-                        <input type="radio" id="{{ choice }}" value="{{ choice }}" name="selection">
-                        <label for="{{ choice }}">{{ choice }}</label><br/>
+                        <li><input type="radio" id="{{ choice }}" value="{{ choice }}" name="radio" data-labelauty="{{ choice }}" onclick="show_answer();"></li>
+                        <!-- <label for="{{ choice }}">{{ choice }}</label><br/> -->
                     {% endfor %}
+                    </ul>
 {#                    {% if textbox %}#}
 {#                        <br>#}
 {#                        <section>#}
@@ -32,11 +34,77 @@
             </form>
         </div>
     </div>
+    
+    
+    <script>
+        function show_answer(){
+            var r;
+            if("{{ answer }}"=="1"){
+                r = "A"
+            }
+            if("{{ answer }}"=="2"){
+                r = "B"
+            }
+            if("{{ answer }}"=="3"){
+                r = "C"
+            }
+            if("{{ answer }}"=="4"){
+                r = "D"
+            }
+            var chkObjs=null; 
+            var right_ele;
+            var x,y;
+            var obj=document.getElementsByName("radio")
+            for (var i=0;i<obj.length;i++){ 
+                if(obj[i].checked){ 
+                    chkObjs=obj[i].value;    //获得选中选项
+                    x = i;
+                } 
+                if(obj[i].value.substr(0,1)==r){
+                    right_ele = obj;         //获得正确选项
+                    y = i;
+                }
+            } 
+            // for(i=0;i<laArr.length;i++){
+            //     laArr[i].setAttribute("style", " background-color: #efefef");
+
+            // }
+            
+
+            if(x == y){
+                //alert("right");
+               
+                var laArr = document.getElementsByTagName("label");
+                for(i=0;i<laArr.length;i++){
+                    if(laArr[i].getAttributeNode("for").value==obj[x].value){
+                        //alert("get");
+                        laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53)");
+                        break;
+                    }
+                } 
+
+            }
+            else{
+                // alert("wrong");
+                var laArr = document.getElementsByTagName("label");
+                for(i=0;i<laArr.length;i++){
+                    if(laArr[i].getAttributeNode("for").value==obj[x].value){
+                        
+                        laArr[i].setAttribute("style", " background-color:rgb(219, 26, 26);");
+                        
+                    }
+                    if(laArr[i].getAttributeNode("for").value==obj[y].value){
+                        
+                        laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53);color:#ffffff;");
+                        
+                    }
+
+                } 
+            }
+    
+        }
+    </script>
+    
 
 {% endblock %}
 
-<script>
-    function show_answer(){
-
-    }
-</script>
