@@ -24,8 +24,7 @@ input.labelauty + label
 	font-size: 20px;
 	padding: 10px;
 	background-color: #efefef;
-	/*color: #b3b3b3;*/
-	color: black;
+	color: #b3b3b3;
 	cursor: pointer;
 
 	border-radius: 3px 3px 3px 3px;
@@ -102,11 +101,10 @@ input.labelauty:checked + label
 	color: #ffffff;
 }
 
-/*input.labelauty:checked:not([disabled]) + label:hover*/
-/*{*/
-/*	background-color: #72c5fd;*/
-/*	!*background-color: #3498db;*!*/
-/*}*/
+input.labelauty:checked:not([disabled]) + label:hover
+{
+	background-color: #72c5fd;
+}
 /* input.labelauty:checked + label > span.labelauty-unchecked-image
 {
 	display: none;
@@ -130,7 +128,9 @@ input.labelauty.no-label:checked + label > span.labelauty-checked
 /* When Disabled */
 input.labelauty[disabled] + label
 {
-	opacity: 0.5;
+	opacity: 0.8;
+	color:black;
+
 }
 
 /* Add a background to (un)checked images
@@ -164,8 +164,7 @@ input.labelauty + label
 	font-size: 20px;
 	padding: 10px;
 	background-color: #efefef;
-	/*color: #b3b3b3;*/
-	color: black;
+	color: #b3b3b3;
 	cursor: pointer;
 
 	border-radius: 3px 3px 3px 3px;
