@@ -32,7 +32,9 @@
                     {% if next_id == 3 %}
                     <button type="reset" style="margin-right: 10px;">Retry</button>
                     {% endif %}
+                    <button type="button" id="setdis" onclick="setalldis();" style="VISIBILITY: hidden">DIS</button>
                     <button type="submit">Next</button>
+                    
                 </div>
             </form>
         </div>
@@ -82,11 +84,13 @@
                     if(laArr[i].getAttributeNode("for").value==obj[x].value){
                         //alert("get");
                         laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53)");
-                        {#break;#}
+                       
                     }
                     else {
                         laArr[i].setAttribute("style", " background-color:#efefef;");
                     }
+
+                    laArr[i].disabled = true;
                 }
 
             }
@@ -98,6 +102,7 @@
 
                         laArr[i].setAttribute("style", " background-color:rgb(219, 26, 26);");
 
+
                     }
                     else if(laArr[i].getAttributeNode("for").value==obj[y].value){
 
@@ -107,9 +112,20 @@
                     else {
                         laArr[i].setAttribute("style", " background-color:#efefef;");
                     }
+                    
                 }
             }
 
+            document.getElementById('setdis').click();
+
+        }
+
+        function setalldis(){
+            
+            var obj=document.getElementsByName("radio")
+            for (var i=0;i<obj.length;i++){
+                obj[i].disabled = 'true';
+            }
         }
     </script>
 
