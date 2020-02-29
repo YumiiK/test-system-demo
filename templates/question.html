@@ -35,11 +35,24 @@
 {#                <div style="float: right;">#}
 {#                    <button id="btn_sumbit" type="submit"  >Next</button>#}
 {#                </div>#}
+                <textarea id="timer" name="timer" style="VISIBILITY: hidden"></textarea>
+
             </form>
         </div>
     </div>
 
     <script>
+        var StarTime = new Date().getTime();
+        setInterval(function() {
+            Retain();
+        }, 1)
+
+        function Retain() {
+            var NowTime = new Date().getTime();
+            //document.querySelectorAll("h6")[0].innerHTML = NowTime - StarTime;
+            document.getElementById('timer').value = (NowTime - StarTime) / 1000 ;
+            //document.getElementById('timer').innerHTML = (NowTime - StarTime) / 1000 ;
+        }
         function MvcSubmit() {
             var form = document.getElementById('attr');
             form.submit();
