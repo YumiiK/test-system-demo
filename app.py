@@ -1,12 +1,14 @@
-from flask import Flask, json, request, session, render_template, redirect, flash, jsonify, make_response, g
+import os
+import zipfile
+
+from flask import Flask, json, request, session, render_template, redirect, flash, jsonify, make_response, g, \
+    send_from_directory
 # from flask_debugtoolbar import DebugToolbarExtension
 from surveys import Question, Survey
 import random
 
 app = Flask(__name__)
 app.secret_key = "SECRET"
-
-result_file = open('result.json', 'w')
 
 # debug = DebugToolbarExtension(app)
 
@@ -190,10 +192,9 @@ def question(test_num, question_num_):
     global result_file
 
     if test_num == 0 and question_num_ == 0:
-        result_file = open('result_%s.json' % Test_No, 'w+', encoding="utf-8")
+        result_file = open('result/result_%s.json' % Test_No, 'w+', encoding="utf-8")
         result_file.write("{\n\"No.\":\"%s\",\n\"QA\":[" % Test_No)
         result_file.close()
-
 
     print(question_num_)
     survey_picked = session['survey_name']
@@ -219,15 +220,19 @@ def question(test_num, question_num_):
             if_right = "y"
         if question_num_ <= 14 or test_num < 2:
             print("***********************************")
-            result_file = open('result_%s.json' % Test_No, 'a+', encoding="utf-8")
-            result_file.write("{\"Set_No\":\"%s\",\"T_No\":\"%s\",\"time\":\"%s\",\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"},\n" % (
-            test_num+1,question_num_,time_interval,test.questions[question_num_ - 1].qindex, test.questions[question_num_ - 1].answer, trans_answer, if_right))
+            result_file = open('result/result_%s.json' % Test_No, 'a+', encoding="utf-8")
+            result_file.write(
+                "{\"Set_No\":\"%s\",\"T_No\":\"%s\",\"time\":\"%s\",\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"},\n" % (
+                    test_num + 1, question_num_, time_interval, test.questions[question_num_ - 1].qindex,
+                    test.questions[question_num_ - 1].answer, trans_answer, if_right))
             result_file.close()
 
         if question_num_ == 15 and test_num == 2:
-            result_file = open('result_%s.json' % Test_No, 'a+', encoding="utf-8")
-            result_file.write("{\"Set_No\":\"%s\",\"T_No\":\"%s\",\"time\":\"%s\",\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"}]}" % (
-            test_num+1,question_num_,time_interval,test.questions[question_num_ - 1].qindex, test.questions[question_num_ - 1].answer, trans_answer, if_right))
+            result_file = open('result/result_%s.json' % Test_No, 'a+', encoding="utf-8")
+            result_file.write(
+                "{\"Set_No\":\"%s\",\"T_No\":\"%s\",\"time\":\"%s\",\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"}]}" % (
+                    test_num + 1, question_num_, time_interval, test.questions[question_num_ - 1].qindex,
+                    test.questions[question_num_ - 1].answer, trans_answer, if_right))
             result_file.close()
 
             Test_No = Test_No + 1
@@ -266,3 +271,33 @@ def thanks():
     resp.set_cookie('surveys_taken', json.dumps(surveys_taken))
 
     return resp
+
+
+@app.route("/download")
+def index():
+    result = []
+    directory = os.getcwd()  # 假设在当前目录
+    for parent, dirnames, filenames in os.walk(directory+'/result'):
+        for filename in filenames:
+            if filename.endswith(".json") and filename != 'task2.json':
+                result.append(filename)
+    return render_template('download.html', filenames=result)
+
+
+@app.route("/download/<filename>", methods=['GET'])
+def download_file(filename):
+    # 需要知道2个参数, 第1个参数是本地目录的path, 第2个参数是文件名(带扩展名)
+    directory = os.getcwd()  # 假设在当前目录
+    return send_from_directory(directory+'/result', filename, as_attachment=True)
+
+
+@app.route("/download-all")
+def download_all():
+    z = zipfile.ZipFile('zip/result.zip', 'w')
+    directory = os.getcwd()  # 假设在当前目录
+    for parent, dirnames, filenames in os.walk(directory+'/result'):
+        for filename in filenames:
+            if filename.endswith(".json") and filename != 'task2.json':
+                z.write(filename)
+    z.close()
+    return send_from_directory(directory+'/zip', 'result.zip', as_attachment=True)

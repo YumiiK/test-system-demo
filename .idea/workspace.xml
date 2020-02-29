@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7586b483-1d27-4d0d-9591-6286909d021a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/download.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/jquery-labelauty.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/jquery-labelauty.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/survey.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/survey.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/question.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/trial.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/trial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +81,7 @@
       <workItem from="1582774260823" duration="15000000" />
       <workItem from="1582812927795" duration="9317000" />
       <workItem from="1582909636603" duration="66000" />
-      <workItem from="1582976159233" duration="3414000" />
+      <workItem from="1582976159233" duration="9399000" />
     </task>
     <task id="LOCAL-00001" summary="test题目位置">
       <created>1582784415436</created>
@@ -113,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582909677667</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="样式 retry">
+      <created>1582979609985</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582979609985</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,10 +142,11 @@
     <MESSAGE value="add break" />
     <MESSAGE value="store data" />
     <MESSAGE value="样式 重复选择 提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="样式 重复选择 提交" />
+    <MESSAGE value="样式 retry" />
+    <option name="LAST_COMMIT_MESSAGE" value="样式 retry" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/test_system$test_system.coverage" NAME="test-system Coverage Results" MODIFIED="1582645888388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/test_system_demo$test_system.coverage" NAME="test-system Coverage Results" MODIFIED="1582979508499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test_system_demo$test_system.coverage" NAME="test-system Coverage Results" MODIFIED="1582986567719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
