@@ -24,7 +24,8 @@ input.labelauty + label
 	font-size: 20px;
 	padding: 10px;
 	background-color: #efefef;
-	color: #b3b3b3;
+	/*color: #b3b3b3;*/
+	color: black;
 	cursor: pointer;
 
 	border-radius: 3px 3px 3px 3px;
@@ -164,7 +165,8 @@ input.labelauty + label
 	font-size: 20px;
 	padding: 10px;
 	background-color: #efefef;
-	color: #b3b3b3;
+	/*color: #b3b3b3;*/
+	color: black;
 	cursor: pointer;
 
 	border-radius: 3px 3px 3px 3px;

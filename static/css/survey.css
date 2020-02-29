@@ -61,3 +61,7 @@ button {
 p {
   font: 20px "Microsoft Yahei";font-weight: bold;
 }
+
+label {
+  width: 708px;
+}

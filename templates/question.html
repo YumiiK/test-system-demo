@@ -14,27 +14,28 @@
             <img src="{{ scatterimg }}">
         </div>
         <div class="question">
-            <form action='/test/{{ test_id }}/{{ next_id }}' , method="POST", id = "attr">
-{#                <fieldset>#}
-                    <p style="padding-inline-start: 40px;" >{{ question }}</p>
-                    <ul class="dowebok">
+            <form action='/test/{{ test_id }}/{{ next_id }}' , method="POST" , id="attr">
+                {#                <fieldset>#}
+                <p style="padding-inline-start: 40px;">{{ question }}</p>
+                <ul class="dowebok">
                     {% for choice in choices %}
-                        <li><input type="radio" id="{{ choice }}" value="{{ choice }}" name="radio" data-labelauty="{{ choice }}" onclick = "MvcSubmit();" style="width: 728px;" ></li>
+                        <li style="width: 728px;"><input type="radio" id="{{ choice }}" value="{{ choice }}" name="radio"
+                                   data-labelauty="{{ choice }}" onclick="MvcSubmit();" style="width: 728px;"></li>
                         <!-- <label for="{{ choice }}">{{ choice }}</label><br/> -->
                     {% endfor %}
-                    </ul>
-                    {#                {% if textbox %}#}
-                    {#                    <br>#}
-                    {#                    <section>#}
-                    {#                        <label for="comments">Comments:</label>#}
-                    {#                        <br>#}
-                    {#                        <textarea id="comments" name="comments"></textarea>#}
-                    {#                    </section>#}
-                    {#                {% endif %}#}
-{#                </fieldset>#}
-{#                <div style="float: right;">#}
-{#                    <button id="btn_sumbit" type="submit"  >Next</button>#}
-{#                </div>#}
+                </ul>
+                {#                {% if textbox %}#}
+                {#                    <br>#}
+                {#                    <section>#}
+                {#                        <label for="comments">Comments:</label>#}
+                {#                        <br>#}
+                {#                        <textarea id="comments" name="comments"></textarea>#}
+                {#                    </section>#}
+                {#                {% endif %}#}
+                {#                </fieldset>#}
+                {#                <div style="float: right;">#}
+                {#                    <button id="btn_sumbit" type="submit"  >Next</button>#}
+                {#                </div>#}
                 <textarea id="timer" name="timer" style="VISIBILITY: hidden"></textarea>
 
             </form>
@@ -43,18 +44,32 @@
 
     <script>
         var StarTime = new Date().getTime();
-        setInterval(function() {
+        setInterval(function () {
             Retain();
         }, 1)
 
         function Retain() {
             var NowTime = new Date().getTime();
             //document.querySelectorAll("h6")[0].innerHTML = NowTime - StarTime;
-            document.getElementById('timer').value = (NowTime - StarTime) / 1000 ;
+            document.getElementById('timer').value = (NowTime - StarTime) / 1000;
             //document.getElementById('timer').innerHTML = (NowTime - StarTime) / 1000 ;
         }
+
         function MvcSubmit() {
+            var x;
+            var obj = document.getElementsByName("radio")
+            for (var i = 0; i < obj.length; i++) {
+                if (obj[i].checked) {
+                    x = i;
+                }
+            }
+            var laArr = document.getElementsByTagName("label");
             var form = document.getElementById('attr');
+            for (i = 0; i < laArr.length; i++) {
+                if (laArr[i].getAttributeNode("for").value == obj[x].value) {
+                    laArr[i].setAttribute("style", " background-color:#3498db;");
+                }
+            }
             form.submit();
         }
     </script>

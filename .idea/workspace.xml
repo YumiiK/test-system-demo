@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7586b483-1d27-4d0d-9591-6286909d021a" name="Default Changelist" comment="store data">
+    <list default="true" id="7586b483-1d27-4d0d-9591-6286909d021a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/jquery-labelauty.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/jquery-labelauty.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/survey.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/survey.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/radio/css/jquery-labelauty.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/jquery-labelauty.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/radio/css/right.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/right.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/radio/images/input-checked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/radio/images/input-unchecked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/radio/js/jquery-1.8.3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/jquery-1.8.3.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/radio/js/jquery-labelauty.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/jquery-labelauty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/question.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/trial.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/trial.html" afterDir="false" />
     </list>
@@ -89,6 +82,8 @@
       <workItem from="1582720581012" duration="6592000" />
       <workItem from="1582774260823" duration="15000000" />
       <workItem from="1582812927795" duration="9317000" />
+      <workItem from="1582909636603" duration="66000" />
+      <workItem from="1582976159233" duration="3414000" />
     </task>
     <task id="LOCAL-00001" summary="test题目位置">
       <created>1582784415436</created>
@@ -111,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582815672137</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="样式 重复选择 提交">
+      <created>1582909677667</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582909677667</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,10 +136,11 @@
     <MESSAGE value="test题目位置" />
     <MESSAGE value="add break" />
     <MESSAGE value="store data" />
-    <option name="LAST_COMMIT_MESSAGE" value="store data" />
+    <MESSAGE value="样式 重复选择 提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="样式 重复选择 提交" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/test_system$test_system.coverage" NAME="test-system Coverage Results" MODIFIED="1582645888388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/test_system_demo$test_system.coverage" NAME="test-system Coverage Results" MODIFIED="1582909400928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/test_system_demo$test_system.coverage" NAME="test-system Coverage Results" MODIFIED="1582979508499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

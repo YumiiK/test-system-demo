@@ -15,7 +15,7 @@
 {#                    <legend>{{ question }}</legend>#}
                     <ul class="dowebok">
                     {% for choice in choices %}
-                        <li><input type="radio" id="{{ choice }}" value="{{ choice }}" name="radio" data-labelauty="{{ choice }}" onclick="show_answer();"style="width: 728px;"></li>
+                        <li style="width: 728px;"><input type="radio" id="{{ choice }}" value="{{ choice }}" name="radio" data-labelauty="{{ choice }}" onclick="show_answer();"style="width: 728px;"></li>
                         <!-- <label for="{{ choice }}">{{ choice }}</label><br/> -->
                     {% endfor %}
                     </ul>
@@ -29,12 +29,11 @@
 {#                    {% endif %}#}
 {#                </fieldset>#}
                 <div style="float: right;">
-                    {% if next_id == 3 %}
-                    <button type="reset" style="margin-right: 10px;">Retry</button>
-                    {% endif %}
                     <button type="button" id="setdis" onclick="setalldis();" style="VISIBILITY: hidden">DIS</button>
+                    {% if next_id == 3 %}
+                    <button type="button" onclick="retry_trial();" style="margin-right: 10px;">Retry</button>
+                    {% endif %}
                     <button type="submit">Next</button>
-                    
                 </div>
             </form>
         </div>
@@ -42,6 +41,10 @@
 
 
     <script>
+        function retry_trial(){
+            location.replace('/start-survey/trial')
+            history.pushState(null, null, '/');
+        }
         function show_answer(){
             var r;
             if("{{ answer }}"=="1"){
@@ -83,8 +86,7 @@
                 for(i=0;i<laArr.length;i++){
                     if(laArr[i].getAttributeNode("for").value==obj[x].value){
                         //alert("get");
-                        laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53)");
-                       
+                        laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53);color:white;");
                     }
                     else {
                         laArr[i].setAttribute("style", " background-color:#efefef;");
@@ -100,7 +102,7 @@
                 for(i=0;i<laArr.length;i++){
                     if(laArr[i].getAttributeNode("for").value==obj[x].value){
 
-                        laArr[i].setAttribute("style", " background-color:rgb(219, 26, 26);");
+                        laArr[i].setAttribute("style", " background-color:rgb(219, 26, 26);color:white;");
 
 
                     }
@@ -121,7 +123,6 @@
         }
 
         function setalldis(){
-            
             var obj=document.getElementsByName("radio")
             for (var i=0;i<obj.length;i++){
                 obj[i].disabled = 'true';
