@@ -67,7 +67,7 @@ pick_num = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 
 def re_init():
-    print("####")
+    print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
     for r in range(len(ch_all)):
         ch_all[r] = []
 
@@ -107,8 +107,6 @@ surveys = {
     "test": test
 }
 
-set1 = 0
-set2 = 0
 
 
 def assign_test(user_num):
@@ -169,24 +167,35 @@ def trial(question_num):
                            scatterimg=surveys[survey_picked].questions[question_num].image,
                            textbox=surveys[survey_picked].questions[question_num].allow_text)
 
+set1 = 1
+set2 = 0
 
 Test_No = 0
 
 
 @app.route('/test/<int:test_num>/<int:question_num_>', methods=["POST"])
 def question(test_num, question_num_):
-    global set1
-    global set2
-    if set1 == 0:
+
+
+    global set1  #控制9套题的初始化
+    global set2  #控制9取1
+
+    if set1 == 1:
         re_init()
-    test.questions = assign_test(set1)
-    print(set2)
-    set2 = set2 + 1
-    if set2 == 15:
-        set2 = 0
-        set1 = set1 + 1
-    if set1 == 9:
         set1 = 0
+    test.questions = assign_test(set2)
+    if question_num_ == 15:
+        set2 = set2 + 1
+    if set2 == 9:
+        set2 = 0
+        set1 = 1
+    print("?????????????")
+    print(set2)
+    print("?????????????")
+    print(set1)
+
+
+
 
     global Test_No
     global result_file
