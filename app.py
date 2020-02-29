@@ -178,7 +178,6 @@ def question(test_num, question_num_):
     if set1 == 0:
         re_init()
     test.questions = assign_test(set1)
-    print("??????????")
     print(set2)
     set2 = set2 + 1
     if set2 == 15:
@@ -195,12 +194,15 @@ def question(test_num, question_num_):
         result_file.write("{\n\"No.\":\"%s\",\n\"QA\":[" % Test_No)
         result_file.close()
 
-    print("AAAAA")
+
     print(question_num_)
     survey_picked = session['survey_name']
     if question_num_ != 0:
         selection = request.form.get("radio")
         comments = request.form.get("comments", "N/A")
+        time_interval = request.form.get("timer")
+        print("The interval is :")
+        print(time_interval)
         answer = (selection, comments)
         print(answer)
         answers = session[survey_picked]
@@ -218,14 +220,14 @@ def question(test_num, question_num_):
         if question_num_ <= 14 or test_num < 2:
             print("***********************************")
             result_file = open('result_%s.json' % Test_No, 'a+', encoding="utf-8")
-            result_file.write("{\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"}," % (
-            test.questions[question_num_ - 1].qindex, test.questions[question_num_ - 1].answer, trans_answer, if_right))
+            result_file.write("{\"Set_No\":\"%s\",\"T_No\":\"%s\",\"time\":\"%s\",\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"},\n" % (
+            test_num+1,question_num_,time_interval,test.questions[question_num_ - 1].qindex, test.questions[question_num_ - 1].answer, trans_answer, if_right))
             result_file.close()
 
         if question_num_ == 15 and test_num == 2:
             result_file = open('result_%s.json' % Test_No, 'a+', encoding="utf-8")
-            result_file.write("{\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"}]}" % (
-            test.questions[question_num_ - 1].qindex, test.questions[question_num_ - 1].answer, trans_answer, if_right))
+            result_file.write("{\"Set_No\":\"%s\",\"T_No\":\"%s\",\"time\":\"%s\",\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"}]}" % (
+            test_num+1,question_num_,time_interval,test.questions[question_num_ - 1].qindex, test.questions[question_num_ - 1].answer, trans_answer, if_right))
             result_file.close()
 
             Test_No = Test_No + 1
