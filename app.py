@@ -1,4 +1,5 @@
 import os
+import pickle
 import zipfile
 
 from flask import Flask, json, request, session, render_template, redirect, flash, jsonify, make_response, g, \
@@ -13,8 +14,13 @@ app.secret_key = "SECRET"
 # debug = DebugToolbarExtension(app)
 
 trial = Survey("Training",
-               "In this section, we have prepared several questions to familiarize you with them. After you choose the "
-               "answer, the correct answer will highlight in green with an icon next to it.",
+               "In the training section, you will have 9 questions to answer. Each question will be presented "
+               "together with a chart. You must choose the best answer from the three choices marked A), B) and C) by "
+               "clicking the choice. After you make the choice, the right answer will be highlighted in green with a "
+               "check mark next to it. If you choose the wrong answer, it will be highlighted in red with a cross "
+               "next to it. Then you need to click NEXT button to move on to the next question. Through this part you "
+               "can get familiar with the tasks. If you are not confident enough, you can repeat the training part by "
+               "clicking RETRY button.",
                []
                )
 
@@ -44,16 +50,7 @@ ch_que6 = []
 ch_que7 = []
 ch_que8 = []
 ch_que9 = []
-ch_all = []
-ch_all.append(ch_que1)
-ch_all.append(ch_que2)
-ch_all.append(ch_que3)
-ch_all.append(ch_que4)
-ch_all.append(ch_que5)
-ch_all.append(ch_que6)
-ch_all.append(ch_que7)
-ch_all.append(ch_que8)
-ch_all.append(ch_que9)
+ch_all = [ch_que1, ch_que2, ch_que3, ch_que4, ch_que5, ch_que6, ch_que7, ch_que8, ch_que9]
 
 test = Survey(
     "Test",
@@ -67,7 +64,6 @@ pick_num = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 
 def re_init():
-    print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
     for r in range(len(ch_all)):
         ch_all[r] = []
 
@@ -108,10 +104,6 @@ surveys = {
 }
 
 
-def assign_test(user_num):
-    return ch_all[user_num]
-
-
 @app.route('/')
 def home():
     surveys_taken = json.loads(request.cookies.get("surveys_taken", '{}'))
@@ -142,7 +134,6 @@ def start_survey(tester_no=0, survey_picked=None):
         tester_no = Test_No
         Test_No = Test_No + 1
     else:
-        print("why")
         tester_no = 0
 
     return render_template('start-survey.html', name=survey_picked, tester=tester_no,
@@ -153,6 +144,7 @@ def start_survey(tester_no=0, survey_picked=None):
 @app.route('/trial/<int:question_num>', methods=["POST", "GET"])
 def trial(question_num):
     survey_picked = session['survey_name']
+    survey_picked = 'trial'  # 强改呃呃呃 防止并行时另一个用户已经进入test，导致本用户无法进入trial
     if question_num != 0:
         selection = request.form.get("radio")
         comments = request.form.get("comments", "N/A")
@@ -162,6 +154,8 @@ def trial(question_num):
         answers[question_num - 1] = answer
         session[survey_picked] = answers
     if question_num >= len(surveys[survey_picked].questions):
+        # print(survey_picked)
+        # print(len(surveys[survey_picked].questions))
         for i in range(len(surveys[survey_picked].questions)):
             question = surveys[survey_picked].questions[i].question
             answer = session[survey_picked][i][0]
@@ -187,47 +181,49 @@ set2 = 0
 @app.route('/test/<int:tester_No>/<int:test_num>/<int:question_num_>', methods=["POST"])
 def question(tester_No, test_num, question_num_):
     global set1  # 控制9套题的初始化
-    global set2  # 控制9取1
 
     if set1 == 1:
         re_init()
         set1 = 0
-    if question_num_ == 0:
+    if question_num_ == 0 and test_num == 0:
         print("again!!!!!")
-        # test.questions = assign_test(set2)
-        single_ques = Question("", "")
-        own_questions = []
-        for xx in range(0, 15):
-            own_questions.append(single_ques)
 
-        own_questions = assign_test(set2)
-        set2 = set2 + 1
+        a_questions = []
+        a_questions = []
+        a_questions = []
+        # for xx in range(0,15):
+        #     own_questions.append(single_ques)
+        a_questions = ch_all[(tester_No % 3) * 3]
+        b_questions = ch_all[(tester_No % 3) * 3 + 1]
+        c_questions = ch_all[(tester_No % 3) * 3 + 2]
+        a_questions = pickle.dumps(a_questions)
+        b_questions = pickle.dumps(b_questions)
+        c_questions = pickle.dumps(c_questions)
+        with open("store/TT_%s_%s" % (tester_No, "0"), "ab") as fw:
+            fw.write(a_questions)
+        with open("store/TT_%s_%s" % (tester_No, "1"), "ab") as fw:
+            fw.write(b_questions)
+        with open("store/TT_%s_%s" % (tester_No, "2"), "ab") as fw:
+            fw.write(c_questions)
 
-    if set2 == 9:
-        set2 = 0
+    if tester_No % 3 == 2 and test_num == 0 and question_num_ == 0:
         set1 = 1
-
-    print("?????????????")
-    print(set2)
-    print("?????????????")
-    print(set1)
-    print("this is ")
-    print(question_num_)
 
     global Test_No
 
-    if test_num == 0:
-        own_questions = assign_test((tester_No % 9) * 3)
-    if test_num == 1:
-        own_questions = assign_test((tester_No % 9) * 3 + 1)
-    if test_num == 2:
-        own_questions = assign_test((tester_No % 9) * 3 + 2)
+    fr = open("store/TT_%s_%s" % (tester_No, test_num), "rb")
+    while 1:
+        try:
+            obj = pickle.load(fr)
+        except:
+            break
+    fr.close()
+    own_questions = obj
 
     if test_num == 0 and question_num_ == 0:
         result_file = open('result/result_%s.json' % tester_No, 'w+', encoding="utf-8")
         result_file.write("{\n\"No.\":\"%s\",\n\"QA\":[" % tester_No)
         result_file.close()
-        # this_result = ResultList([],[],[],[],[],[],[])
 
     survey_picked = session['survey_name']
     if question_num_ != 0:
@@ -365,7 +361,7 @@ def delete_all():
     directory = os.getcwd()  # 假设在当前目录
     for parent, dirnames, filenames in os.walk(directory + '/result'):
         for filename in filenames:
-            os.remove(directory+'/result/'+filename)
+            os.remove(directory + '/result/' + filename)
     return render_template('download.html')
 
 

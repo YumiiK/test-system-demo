@@ -65,3 +65,17 @@ p {
 label {
   width: 708px;
 }
+
+.prompt {
+  font-family: "Noto Sans SC";
+  font-size: 20px;
+}
+
+.intro {
+  margin: 20px 250px 50px;
+}
+
+.break {
+  margin: 20px 510px 50px;
+text-align: left;
+}

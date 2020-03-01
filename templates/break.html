@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
-  {% block title %}break{% endblock %}
+{% block title %}break{% endblock %}
 
-  {% block body %}
-  <h1>Break</h1>
-  <h3>You can have a break, and continue whenever you want.</h3>
-  <div id="start-survey">
-    <form action="/test/{{tester}}/{{ test_id }}/0" method="POST">
-      <button type="submit">Continue</button>
-    </form>
-  </div>
-  {% endblock %}
+{% block body %}
+    <h1>Break</h1>
+    <li class="break">
+        <h3 class="prompt">You have completed {{ test_id * 15 }}/45 questions.</h3>
+        <h3 class="prompt">Please take a short break.</h3>
+        <h3 class="prompt">Click CONTINUE button to go into the next part.</h3>
+    </li>
+    <div id="start-survey">
+        <form action="/test/{{ tester }}/{{ test_id }}/0" method="POST">
+            <button type="submit">Continue</button>
+        </form>
+    </div>
+{% endblock %}

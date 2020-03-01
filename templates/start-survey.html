@@ -1,19 +1,34 @@
 {% extends 'base.html' %}
-  {% block title %}{{title}}{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
-  {% block body %}
-  <h1>{{title}}</h1>
-  <h3>{{instructions}}</h3>
-  <div id="start-survey">
-  {% if name == 'trial' %}
-    <form action="/{{name}}/{{tester}}" method="POST">
-      <button type="submit">Start</button>
-    </form>
-  {% endif %}
-  {% if name == 'test' %}
-    <form action="/{{name}}/{{tester}}/0/0" method="POST">
-      <button type="submit">Start</button>
-    </form>
-  {% endif %}
-  </div>
-  {% endblock %}
+{% block body %}
+    <h1>{{ title }}</h1>
+{#    <h3>{{ instructions }}</h3>#}
+    <li class="intro">
+    {% if name == 'trial' %}
+        <p class="prompt">In the training section, you will have 9 questions to answer. Each question will be presented together with a chart.</p>
+        <p class="prompt">You must choose the best answer from the three choices marked A), B) and C) by clicking the choice. After you make the choice, the right answer will be highlighted in green with a check mark next to it. If you choose the wrong answer, it will be highlighted in red with a cross next to it. Then you need to click NEXT button to move on to the next question.</p>
+        <p class="prompt">Through this part you can get familiar with the tasks.</p>
+        <p class="prompt">If you are not confident enough, you can repeat the training part by clicking RETRY button.</p>
+    {% endif %}
+    {% if name == 'test' %}
+        <p class="prompt">In the formal test, you will have 45 questions to answer. Each question is similar to that of the training part.</p>
+        <p class="prompt">However, in the formal test, NEXT button is removed, and the right answer will not be shown. You will move on to the next question immediately after you make the choice.</p>
+        <p class="prompt">When doing the test, you are required to make the correct choice as soon as possible.</p>
+        <p class="prompt">The 45 questions will be divided into 3 parts, each containing 15 questions. After you finish each part,  you can take a short rest.</p>
+    {% endif %}
+    </li>
+
+    <div id="start-survey">
+        {% if name == 'trial' %}
+            <form action="/{{ name }}/{{ tester }}" method="POST">
+                <button type="submit">Start</button>
+            </form>
+        {% endif %}
+        {% if name == 'test' %}
+            <form action="/{{ name }}/{{ tester }}/0/0" method="POST">
+                <button type="submit">Start</button>
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}
