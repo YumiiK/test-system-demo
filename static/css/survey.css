@@ -79,3 +79,24 @@ label {
   margin: 20px 510px 50px;
 text-align: left;
 }
+
+button {
+  font-family: "Microsoft Yahei";
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 18px;
+  background: #3d3d3d;
+  padding: 7px 20px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #ffffff;
+  background: black;
+  text-decoration: none;
+  cursor: pointer;
+}
