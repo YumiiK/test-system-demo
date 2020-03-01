@@ -3,22 +3,22 @@
 
 {% block body %}
     <h1>THANKS!</h1>
-
-    <h3>Your Answers:</h3>
-    {% for category, msg in get_flashed_messages(with_categories=true) %}
-        {% if category == 'question' %}
-            <br>
-            <b>{{ msg }}</b>
-        {% endif %}
-        {% if category == 'answer' %}
-            {{ msg }}
-            <br>
-        {% endif %}
-        {% if category == 'comment' %}
-            {% if msg != 'N/A' %}
-                <b>your comment:</b> {{ msg }}
-                <br>
-            {% endif %}
-        {% endif %}
-    {% endfor %}
+        <h3>Thank you for your participation.</h3>
+{#    <h3>Your Answers:</h3>#}
+{#    {% for category, msg in get_flashed_messages(with_categories=true) %}#}
+{#        {% if category == 'question' %}#}
+{#            <br>#}
+{#            <b>{{ msg }}</b>#}
+{#        {% endif %}#}
+{#        {% if category == 'answer' %}#}
+{#            {{ msg }}#}
+{#            <br>#}
+{#        {% endif %}#}
+{#        {% if category == 'comment' %}#}
+{#            {% if msg != 'N/A' %}#}
+{#                <b>your comment:</b> {{ msg }}#}
+{#                <br>#}
+{#            {% endif %}#}
+{#        {% endif %}#}
+{#    {% endfor %}#}
 {% endblock %}

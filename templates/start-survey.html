@@ -6,12 +6,12 @@
   <h3>{{instructions}}</h3>
   <div id="start-survey">
   {% if name == 'trial' %}
-    <form action="/{{name}}/0" method="POST">
+    <form action="/{{name}}/{{tester}}" method="POST">
       <button type="submit">Start</button>
     </form>
   {% endif %}
   {% if name == 'test' %}
-    <form action="/{{name}}/0/0" method="POST">
+    <form action="/{{name}}/{{tester}}/0/0" method="POST">
       <button type="submit">Start</button>
     </form>
   {% endif %}

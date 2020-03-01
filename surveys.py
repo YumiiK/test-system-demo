@@ -27,6 +27,17 @@ class Survey:
         self.instructions = instructions
         self.questions = questions
 
+
+class ResultList:
+    def __init__(self, set_no, t_no, ans_time, t_index, c_a, p_a, ifright):
+        self.set_no = set_no
+        self.t_no = t_no
+        self.ans_time = ans_time
+        self.t_index = t_index
+        self.c_a = c_a
+        self.p_a = p_a
+        self.ifright = ifright
+
 # trial = Survey(
 #     "Trial",
 #     "In this section, we have prepared several questions to familiarize you with them. After you choose the "

@@ -4,7 +4,7 @@ import zipfile
 from flask import Flask, json, request, session, render_template, redirect, flash, jsonify, make_response, g, \
     send_from_directory
 # from flask_debugtoolbar import DebugToolbarExtension
-from surveys import Question, Survey
+from surveys import Question, Survey, ResultList
 import random
 
 app = Flask(__name__)
@@ -14,11 +14,11 @@ app.secret_key = "SECRET"
 
 trial = Survey("Training",
                "In this section, we have prepared several questions to familiarize you with them. After you choose the "
-               "answer, the correct answer will appear.",
+               "answer, the correct answer will highlight in green with an icon next to it.",
                []
                )
 
-train_files = ["02_T2_M_100", "03_T2_L_1k", "04_T2_H_300"]
+train_files = ["02_T2_M_100", "03_T2_L_1k", "04_T2_H_300"]  # 不能和test重复  用额外数据集
 
 with open('task2.json', mode='r') as f:
     data = json.load(f)
@@ -108,7 +108,6 @@ surveys = {
 }
 
 
-
 def assign_test(user_num):
     return ch_all[user_num]
 
@@ -122,8 +121,11 @@ def home():
     return render_template('home.html', surveys=current_user_surveys)
 
 
-@app.route('/start-survey/<string:survey_picked>', methods=["POST", "GET"])
-def start_survey(survey_picked=None):
+Test_No = 0
+
+
+@app.route('/start-survey/<string:survey_picked>/<int:tester_no>', methods=["POST", "GET"])
+def start_survey(tester_no=0, survey_picked=None):
     # store survey picked in session
     session['survey_name'] = survey_picked
     # if survey_picked == "test":
@@ -134,7 +136,17 @@ def start_survey(survey_picked=None):
     # print(len(surveys[survey_picked].questions))
     # session[survey_picked] = [()] * len(surveys[survey_picked].questions)
     session[survey_picked] = [()] * 45
-    return render_template('start-survey.html', name=survey_picked, title=surveys[survey_picked].title,
+
+    if survey_picked == "test":
+        global Test_No
+        tester_no = Test_No
+        Test_No = Test_No + 1
+    else:
+        print("why")
+        tester_no = 0
+
+    return render_template('start-survey.html', name=survey_picked, tester=tester_no,
+                           title=surveys[survey_picked].title,
                            instructions=surveys[survey_picked].instructions)
 
 
@@ -158,7 +170,7 @@ def trial(question_num):
             flash(question, 'question')
             flash(answer, 'answer')
             flash(comment, 'comment')
-        return redirect('/start-survey/test')
+        return redirect('/start-survey/test/0')
 
     return render_template('trial.html', next_id=question_num + 1,
                            question=surveys[survey_picked].questions[question_num].question,
@@ -167,45 +179,56 @@ def trial(question_num):
                            scatterimg=surveys[survey_picked].questions[question_num].image,
                            textbox=surveys[survey_picked].questions[question_num].allow_text)
 
+
 set1 = 1
 set2 = 0
 
-Test_No = 0
 
-
-@app.route('/test/<int:test_num>/<int:question_num_>', methods=["POST"])
-def question(test_num, question_num_):
-
-
-    global set1  #控制9套题的初始化
-    global set2  #控制9取1
+@app.route('/test/<int:tester_No>/<int:test_num>/<int:question_num_>', methods=["POST"])
+def question(tester_No, test_num, question_num_):
+    global set1  # 控制9套题的初始化
+    global set2  # 控制9取1
 
     if set1 == 1:
         re_init()
         set1 = 0
-    test.questions = assign_test(set2)
-    if question_num_ == 15:
+    if question_num_ == 0:
+        print("again!!!!!")
+        # test.questions = assign_test(set2)
+        single_ques = Question("", "")
+        own_questions = []
+        for xx in range(0, 15):
+            own_questions.append(single_ques)
+
+        own_questions = assign_test(set2)
         set2 = set2 + 1
+
     if set2 == 9:
         set2 = 0
         set1 = 1
+
     print("?????????????")
     print(set2)
     print("?????????????")
     print(set1)
-
-
-
+    print("this is ")
+    print(question_num_)
 
     global Test_No
-    global result_file
+
+    if test_num == 0:
+        own_questions = assign_test((tester_No % 9) * 3)
+    if test_num == 1:
+        own_questions = assign_test((tester_No % 9) * 3 + 1)
+    if test_num == 2:
+        own_questions = assign_test((tester_No % 9) * 3 + 2)
 
     if test_num == 0 and question_num_ == 0:
-        result_file = open('result/result_%s.json' % Test_No, 'w+', encoding="utf-8")
-        result_file.write("{\n\"No.\":\"%s\",\n\"QA\":[" % Test_No)
+        result_file = open('result/result_%s.json' % tester_No, 'w+', encoding="utf-8")
+        result_file.write("{\n\"No.\":\"%s\",\n\"QA\":[" % tester_No)
         result_file.close()
+        # this_result = ResultList([],[],[],[],[],[],[])
 
-    print(question_num_)
     survey_picked = session['survey_name']
     if question_num_ != 0:
         selection = request.form.get("radio")
@@ -225,48 +248,73 @@ def question(test_num, question_num_):
         if selection[0:1] == 'C':
             trans_answer = "3"
         if_right = "n"
-        if trans_answer == test.questions[question_num_ - 1].answer:
+        if trans_answer == own_questions[question_num_ - 1].answer:
             if_right = "y"
         if question_num_ <= 14 or test_num < 2:
+            # this_result.set_no.append(test_num + 1)
+            # this_result.t_no.append(question_num_)
+            # this_result.ans_time.append(time_interval)
+            # this_result.c_a.append(test.questions[question_num_ - 1].answer)
+            # this_result.p_a.append(trans_answer)
+            # this_result.t_index.append(test.questions[question_num_ - 1].qindex)
+            # this_result.ifright.append(if_right)
             print("***********************************")
-            result_file = open('result/result_%s.json' % Test_No, 'a+', encoding="utf-8")
+            result_file = open('result/result_%s.json' % tester_No, 'a+', encoding="utf-8")
             result_file.write(
                 "{\"Set_No\":\"%s\",\"T_No\":\"%s\",\"time\":\"%s\",\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"},\n" % (
-                    test_num + 1, question_num_, time_interval, test.questions[question_num_ - 1].qindex,
-                    test.questions[question_num_ - 1].answer, trans_answer, if_right))
+                    test_num + 1, question_num_, time_interval, own_questions[question_num_ - 1].qindex,
+                    own_questions[question_num_ - 1].answer, trans_answer, if_right))
             result_file.close()
 
         if question_num_ == 15 and test_num == 2:
-            result_file = open('result/result_%s.json' % Test_No, 'a+', encoding="utf-8")
+            # this_result.set_no.append(test_num + 1)
+            # this_result.t_no.append(question_num_)
+            # this_result.ans_time.append(time_interval)
+            # this_result.c_a.append(test.questions[question_num_ - 1].answer)
+            # this_result.p_a.append(trans_answer)
+            # this_result.t_index.append(test.questions[question_num_ - 1].qindex)
+            # this_result.ifright.append(if_right)
+
+            result_file = open('result/result_%s.json' % tester_No, 'a+', encoding="utf-8")
             result_file.write(
                 "{\"Set_No\":\"%s\",\"T_No\":\"%s\",\"time\":\"%s\",\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"}]}" % (
-                    test_num + 1, question_num_, time_interval, test.questions[question_num_ - 1].qindex,
-                    test.questions[question_num_ - 1].answer, trans_answer, if_right))
+                    test_num + 1, question_num_, time_interval, own_questions[question_num_ - 1].qindex,
+                    own_questions[question_num_ - 1].answer, trans_answer, if_right))
             result_file.close()
 
-            Test_No = Test_No + 1
+            # result_file = open('result/result_%s.json' % tester_No, 'a+', encoding="utf-8")
+            # for cc in range(44):
+            #     result_file.write(
+            #     "{\"Set_No\":\"%s\",\"T_No\":\"%s\",\"time\":\"%s\",\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"},\n" % (
+            #         this_result.set_no[cc], this_result.t_no[cc], this_result.ans_time[cc], this_result.t_index[cc],
+            #         this_result.c_a[cc], this_result.p_a[cc], this_result.ifright[cc]))
+            # result_file.write(
+            #     "{\"Set_No\":\"%s\",\"T_No\":\"%s\",\"time\":\"%s\",\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"}]}" % (
+            #         this_result.set_no[44], this_result.t_no[44], this_result.ans_time[44], this_result.t_index[44],
+            #         this_result.c_a[44], this_result.p_a[44], this_result.ifright[44]))
+            # result_file.close()
 
-    if question_num_ >= len(surveys[survey_picked].questions):
-        for i in range(len(surveys[survey_picked].questions)):
-            question = surveys[survey_picked].questions[i].question
-            answer = session[survey_picked][i][0]
-            comment = session[survey_picked][i][1]
-            # TURN INTO DICT FIRST
-            flash(question, 'question')
-            flash(answer, 'answer')
-            flash(comment, 'comment')
+    if question_num_ >= len(own_questions):
+        # for i in range(len(surveys[survey_picked].questions)):
+        #     question = surveys[survey_picked].questions[i].question
+        #     answer = session[survey_picked][i][0]
+        #     comment = session[survey_picked][i][1]
+        #     # TURN INTO DICT FIRST
+        #     flash(question, 'question')
+        #     flash(answer, 'answer')
+        #     flash(comment, 'comment')
 
         if test_num >= 2:
             return redirect('/thanks')
         else:
-            return render_template('break.html', test_id=test_num + 1)
+            return render_template('break.html', test_id=test_num + 1, tester=tester_No)
 
-    return render_template('question.html', next_id=question_num_ + 1, test_id=test_num,
-                           question=surveys[survey_picked].questions[question_num_].question,
-                           choices=surveys[survey_picked].questions[question_num_].choices,
-                           answer=surveys[survey_picked].questions[question_num_].answer,
-                           scatterimg=surveys[survey_picked].questions[question_num_].image,
-                           textbox=surveys[survey_picked].questions[question_num_].allow_text)
+    return render_template('question.html', tester=tester_No, next_id=question_num_ + 1, test_id=test_num,
+                           question=own_questions[question_num_].question,
+                           choices=own_questions[question_num_].choices,
+                           answer=own_questions[question_num_].answer,
+                           scatterimg=own_questions[question_num_].image,
+                           textbox=own_questions[question_num_].allow_text)
 
 
 @app.route('/thanks')
@@ -286,7 +334,7 @@ def thanks():
 def index():
     result = []
     directory = os.getcwd()  # 假设在当前目录
-    for parent, dirnames, filenames in os.walk(directory+'/result'):
+    for parent, dirnames, filenames in os.walk(directory + '/result'):
         for filename in filenames:
             if filename.endswith(".json") and filename != 'task2.json':
                 result.append(filename)
@@ -297,16 +345,29 @@ def index():
 def download_file(filename):
     # 需要知道2个参数, 第1个参数是本地目录的path, 第2个参数是文件名(带扩展名)
     directory = os.getcwd()  # 假设在当前目录
-    return send_from_directory(directory+'/result', filename, as_attachment=True)
+    return send_from_directory(directory + '/result', filename, as_attachment=True)
 
 
 @app.route("/download-all")
 def download_all():
     z = zipfile.ZipFile('zip/result.zip', 'w')
     directory = os.getcwd()  # 假设在当前目录
-    for parent, dirnames, filenames in os.walk(directory+'/result'):
+    for parent, dirnames, filenames in os.walk(directory + '/result'):
         for filename in filenames:
-            if filename.endswith(".json") and filename != 'task2.json':
-                z.write(filename)
+            # if filename.endswith(".json") and filename != 'task2.json':
+            z.write(filename)
     z.close()
-    return send_from_directory(directory+'/zip', 'result.zip', as_attachment=True)
+    return send_from_directory(directory + '/zip', 'result.zip', as_attachment=True)
+
+
+@app.route("/download/delete-all")
+def delete_all():
+    directory = os.getcwd()  # 假设在当前目录
+    for parent, dirnames, filenames in os.walk(directory + '/result'):
+        for filename in filenames:
+            os.remove(directory+'/result/'+filename)
+    return render_template('download.html')
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
