@@ -87,6 +87,7 @@
                     if(laArr[i].getAttributeNode("for").value==obj[x].value){
                         //alert("get");
                         laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53);color:white;");
+
                     }
                     else {
                         laArr[i].setAttribute("style", " background-color:#efefef;");
@@ -101,14 +102,46 @@
                 var laArr = document.getElementsByTagName("label");
                 for(i=0;i<laArr.length;i++){
                     if(laArr[i].getAttributeNode("for").value==obj[x].value){
+                        
 
                         laArr[i].setAttribute("style", " background-color:rgb(219, 26, 26);color:white;");
+
+                        var icon = laArr[i].getElementsByTagName("span");
+                        for(j=0;j<icon.length;j++){
+                            
+                            
+                            if(icon[j].getAttribute("class") == "labelauty-checked-image"){
+                                
+                                icon[j].setAttribute("style","background-image: url(../static/icon/no.png );");
+                               
+
+                            }
+                    
+                            
+                        }
 
 
                     }
                     else if(laArr[i].getAttributeNode("for").value==obj[y].value){
 
+                        
+                        
+
                         laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53);color:#ffffff;");
+
+                        var icon = laArr[i].getElementsByTagName("span");
+                        for(j=0;j<icon.length;j++){
+                            
+                            
+                            if(icon[j].getAttribute("class") == "labelauty-unchecked-image"){
+                                
+                                icon[j].setAttribute("style","background-image: url(../static/icon/yes.png );");
+                               
+
+                            }
+                    
+                            
+                        }
 
                     }
                     else {

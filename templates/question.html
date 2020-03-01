@@ -32,6 +32,8 @@
                 {#                    <button id="btn_sumbit" type="submit"  >Next</button>#}
                 {#                </div>#}
                 <textarea id="timer" name="timer" style="VISIBILITY: hidden"></textarea>
+                <textarea id="browser" name="browser" style="VISIBILITY: hidden"></textarea>
+                
 
             </form>
         </div>
@@ -50,6 +52,10 @@
             //document.getElementById('timer').innerHTML = (NowTime - StarTime) / 1000 ;
         }
 
+        window.onload = function () {
+            document.getElementById('browser').value = "("+window.screen.width +","+window.screen.height+")";
+        }
+
         function MvcSubmit() {
             var x;
             var obj = document.getElementsByName("radio")
@@ -63,10 +69,27 @@
             for (i = 0; i < laArr.length; i++) {
                 if (laArr[i].getAttributeNode("for").value == obj[x].value) {
                     laArr[i].setAttribute("style", " background-color:#3498db;");
+                   
+                    var icon = laArr[i].getElementsByTagName("span");
+                        for(j=0;j<icon.length;j++){
+                            
+                            
+                            if(icon[j].getAttribute("class") == "labelauty-checked-image"){
+                                
+                                icon[j].setAttribute("style","background-image: url(../static/icon/input-unchecked.png );");
+                               
+
+                            }
+                    
+                            
+                        }
                 }
             }
             form.submit();
         }
+
+
+
     </script>
 
 
