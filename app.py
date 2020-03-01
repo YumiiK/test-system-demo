@@ -232,6 +232,10 @@ def question(tester_No, test_num, question_num_):
         time_interval = request.form.get("timer")
         print("The interval is :")
         print(time_interval)
+
+        browser_size = request.form.get("browser")
+
+
         answer = (selection, comments)
         print(answer)
         answers = session[survey_picked]
@@ -273,9 +277,9 @@ def question(tester_No, test_num, question_num_):
 
             result_file = open('result/result_%s.json' % tester_No, 'a+', encoding="utf-8")
             result_file.write(
-                "{\"Set_No\":\"%s\",\"T_No\":\"%s\",\"time\":\"%s\",\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"}]}" % (
+                "{\"Set_No\":\"%s\",\"T_No\":\"%s\",\"time\":\"%s\",\"index\":\"%s\",\"CorrectA\":\"%s\",\"PersonA\":\"%s\",\"correctness\":\"%s\"}],\n\"browser\":\"%s\"}" % (
                     test_num + 1, question_num_, time_interval, own_questions[question_num_ - 1].qindex,
-                    own_questions[question_num_ - 1].answer, trans_answer, if_right))
+                    own_questions[question_num_ - 1].answer, trans_answer, if_right,browser_size))
             result_file.close()
 
             # result_file = open('result/result_%s.json' % tester_No, 'a+', encoding="utf-8")
