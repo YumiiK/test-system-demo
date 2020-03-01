@@ -67,8 +67,7 @@
 			// Don't mess me up, come on
 			if( $object.is( ":checkbox" ) === false && $object.is( ":radio" ) === false)
 				return this;
-			if($object.prop("name") == "right")
-			    return this;
+		
 
 
 			
@@ -222,9 +221,9 @@
 		if( label == true )
 		{
 			block = '<label for="' + input_id + '">' +
-						// '<span class="labelauty-unchecked-image"></span>' +
+						'<span class="labelauty-unchecked-image"></span>' +
 						'<span class="labelauty-unchecked">' + unchecked_message + '</span>' +
-						// '<span class="labelauty-checked-image"></span>' +
+						'<span class="labelauty-checked-image"></span>' +
 						'<span class="labelauty-checked">' + checked_message + '</span>' +
 					'</label>';
 		}
