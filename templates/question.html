@@ -14,8 +14,10 @@
                 <p style="padding-inline-start: 40px;">{{ question }}</p>
                 <ul class="dowebok">
                     {% for choice in choices %}
-                        <li style="width: 728px;"><input type="radio" id="{{ choice }}" value="{{ choice }}" name="radio"
-                                   data-labelauty="{{ choice }}" onclick="MvcSubmit();" style="width: 728px;"></li>
+                        <li style="width: 728px;"><input type="radio" id="{{ choice }}" value="{{ choice }}"
+                                                         name="radio"
+                                                         data-labelauty="{{ choice }}" onclick="MvcSubmit();"
+                                                         style="width: 728px;"></li>
                         <!-- <label for="{{ choice }}">{{ choice }}</label><br/> -->
                     {% endfor %}
                 </ul>
@@ -33,7 +35,7 @@
                 {#                </div>#}
                 <textarea id="timer" name="timer" style="VISIBILITY: hidden"></textarea>
                 <textarea id="browser" name="browser" style="VISIBILITY: hidden"></textarea>
-                
+
 
             </form>
         </div>
@@ -53,7 +55,7 @@
         }
 
         window.onload = function () {
-            document.getElementById('browser').value = "("+window.screen.width +","+window.screen.height+")";
+            document.getElementById('browser').value = "(" + window.screen.width + "," + window.screen.height + ")";
         }
 
         function MvcSubmit() {
@@ -66,28 +68,25 @@
             }
             var laArr = document.getElementsByTagName("label");
             var form = document.getElementById('attr');
+            console.log('0')
             for (i = 0; i < laArr.length; i++) {
                 if (laArr[i].getAttributeNode("for").value == obj[x].value) {
                     laArr[i].setAttribute("style", " background-color:#3498db;");
-                   
                     var icon = laArr[i].getElementsByTagName("span");
-                        for(j=0;j<icon.length;j++){
-                            
-                            
-                            if(icon[j].getAttribute("class") == "labelauty-checked-image"){
-                                
-                                icon[j].setAttribute("style","background-image: url(../static/icon/input-unchecked.png );");
-                               
+                    for (j = 0; j < icon.length; j++) {
 
-                            }
-                    
-                            
+                        if (icon[j].getAttribute("class") == "labelauty-checked-image") {
+
+                            icon[j].setAttribute("style", "background-image: url(../static/icon/input-unchecked.png );");
+
                         }
+
+
+                    }
                 }
             }
             form.submit();
         }
-
 
 
     </script>

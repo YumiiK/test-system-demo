@@ -38,12 +38,13 @@ input {
 .plot {
   display: inline-block;
   float: left;
+  width: 550px;
 }
 
 .testing {
   box-sizing: border-box;
-  padding-right: 5em;
   padding-left: 5em;
+  padding-right: 90px;
 }
 
 form {

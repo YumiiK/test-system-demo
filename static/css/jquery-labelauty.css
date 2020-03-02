@@ -49,7 +49,7 @@ input.labelauty + label
 input.labelauty + label > span.labelauty-unchecked,
 input.labelauty + label > span.labelauty-checked
 {
-	display: inline-block;
+	display: table-cell;
 	line-height: 25px;
 	vertical-align: bottom;
 }
@@ -118,7 +118,7 @@ input.labelauty:checked + label > span.labelauty-unchecked
 
 input.labelauty:checked + label > span.labelauty-checked
 {
-	display: inline-block;
+	display: table-cell;
 }
 
 input.labelauty.no-label:checked + label > span.labelauty-checked
@@ -143,6 +143,7 @@ input.labelauty + label > span.labelauty-unchecked-image
 input.labelauty + label > span.labelauty-checked-image
 {
 	background-image: url( ../icon/input-checked.png );
+	scale: 0.8;
 }
 
 

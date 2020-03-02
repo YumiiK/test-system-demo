@@ -10,28 +10,30 @@
         </div>
         <div class="question">
             <form action='/trial/{{ next_id }}' , method="POST">
-{#                <fieldset>#}
-                    <p style="padding-inline-start: 40px;" >{{ question }}</p>
-{#                    <legend>{{ question }}</legend>#}
-                    <ul class="dowebok">
+                {#                <fieldset>#}
+                <p style="padding-inline-start: 40px;">{{ question }}</p>
+                {#                    <legend>{{ question }}</legend>#}
+                <ul class="dowebok">
                     {% for choice in choices %}
-                        <li style="width: 728px;"><input type="radio" id="{{ choice }}" value="{{ choice }}" name="radio" data-labelauty="{{ choice }}" onclick="show_answer();"style="width: 728px;"></li>
+                        <li style="width: 728px;"><input type="radio" id="{{ choice }}" value="{{ choice }}"
+                                                         name="radio" data-labelauty="{{ choice }}"
+                                                         onclick="show_answer();" style="width: 728px;"></li>
                         <!-- <label for="{{ choice }}">{{ choice }}</label><br/> -->
                     {% endfor %}
-                    </ul>
-{#                    {% if textbox %}#}
-{#                        <br>#}
-{#                        <section>#}
-{#                            <label for="comments">Comments:</label>#}
-{#                            <br>#}
-{#                            <textarea id="comments" name="comments"></textarea>#}
-{#                        </section>#}
-{#                    {% endif %}#}
-{#                </fieldset>#}
+                </ul>
+                {#                    {% if textbox %}#}
+                {#                        <br>#}
+                {#                        <section>#}
+                {#                            <label for="comments">Comments:</label>#}
+                {#                            <br>#}
+                {#                            <textarea id="comments" name="comments"></textarea>#}
+                {#                        </section>#}
+                {#                    {% endif %}#}
+                {#                </fieldset>#}
                 <div style="float: right;">
                     <button type="button" id="setdis" onclick="setalldis();" style="VISIBILITY: hidden">DIS</button>
                     {% if next_id == 3 %}
-                    <button type="button" onclick="retry_trial();" style="margin-right: 10px;">Retry</button>
+                        <button type="button" onclick="retry_trial();" style="margin-right: 10px;">Retry</button>
                     {% endif %}
                     <button type="submit">Next</button>
                 </div>
@@ -41,34 +43,35 @@
 
 
     <script>
-        function retry_trial(){
+        function retry_trial() {
             location.replace('/start-survey/trial/0')
             history.pushState(null, null, '/');
         }
-        function show_answer(){
+
+        function show_answer() {
             var r;
-            if("{{ answer }}"=="1"){
+            if ("{{ answer }}" == "1") {
                 r = "A"
             }
-            if("{{ answer }}"=="2"){
+            if ("{{ answer }}" == "2") {
                 r = "B"
             }
-            if("{{ answer }}"=="3"){
+            if ("{{ answer }}" == "3") {
                 r = "C"
             }
-            if("{{ answer }}"=="4"){
+            if ("{{ answer }}" == "4") {
                 r = "D"
             }
-            var chkObjs=null;
+            var chkObjs = null;
             var right_ele;
-            var x,y;
-            var obj=document.getElementsByName("radio")
-            for (var i=0;i<obj.length;i++){
-                if(obj[i].checked){
-                    chkObjs=obj[i].value;    //获得选中选项
+            var x, y;
+            var obj = document.getElementsByName("radio")
+            for (var i = 0; i < obj.length; i++) {
+                if (obj[i].checked) {
+                    chkObjs = obj[i].value;    //获得选中选项
                     x = i;
                 }
-                if(obj[i].value.substr(0,1)==r){
+                if (obj[i].value.substr(0, 1) == r) {
                     right_ele = obj;         //获得正确选项
                     y = i;
                 }
@@ -79,75 +82,61 @@
             // }
 
 
-            if(x == y){
+            if (x == y) {
                 //alert("right");
 
                 var laArr = document.getElementsByTagName("label");
-                for(i=0;i<laArr.length;i++){
-                    if(laArr[i].getAttributeNode("for").value==obj[x].value){
+                for (i = 0; i < laArr.length; i++) {
+                    if (laArr[i].getAttributeNode("for").value == obj[x].value) {
                         //alert("get");
                         laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53);color:white;");
 
-                    }
-                    else {
+                    } else {
                         laArr[i].setAttribute("style", " background-color:#efefef;");
                     }
 
                     laArr[i].disabled = true;
                 }
 
-            }
-            else{
+            } else {
                 // alert("wrong");
                 var laArr = document.getElementsByTagName("label");
-                for(i=0;i<laArr.length;i++){
-                    if(laArr[i].getAttributeNode("for").value==obj[x].value){
-                        
+                for (i = 0; i < laArr.length; i++) {
+                    if (laArr[i].getAttributeNode("for").value == obj[x].value) {
 
-                        laArr[i].setAttribute("style", " background-color:rgb(219, 26, 26);color:white;");
+
+                        laArr[i].setAttribute("style", " background-color:rgb(219, 26, 26);color:white;padding-left: 9px;");
 
                         var icon = laArr[i].getElementsByTagName("span");
-                        for(j=0;j<icon.length;j++){
-                            
-                            
-                            if(icon[j].getAttribute("class") == "labelauty-checked-image"){
-                                
-                                icon[j].setAttribute("style","background-image: url(../static/icon/no.png );");
-                               
-
+                        for (j = 0; j < icon.length; j++) {
+                            if (icon[j].getAttribute("class") == "labelauty-checked-image") {
+                                icon[j].setAttribute("style", "background-image: url(../static/icon/cross.png );scale:0.8;");
                             }
-                    
-                            
                         }
 
 
-                    }
-                    else if(laArr[i].getAttributeNode("for").value==obj[y].value){
+                    } else if (laArr[i].getAttributeNode("for").value == obj[y].value) {
 
-                        
-                        
 
                         laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53);color:#ffffff;");
 
                         var icon = laArr[i].getElementsByTagName("span");
-                        for(j=0;j<icon.length;j++){
-                            
-                            
-                            if(icon[j].getAttribute("class") == "labelauty-unchecked-image"){
-                                
-                                icon[j].setAttribute("style","background-image: url(../static/icon/yes.png );");
-                               
+                        for (j = 0; j < icon.length; j++) {
+
+
+                            if (icon[j].getAttribute("class") == "labelauty-unchecked-image") {
+
+                                icon[j].setAttribute("style", "background-image: url(../static/icon/input-checked.png );scale:0.8;");
 
                             }
-                    
-                            
+
+
                         }
 
-                    }
-                    else {
+                    } else {
                         laArr[i].setAttribute("style", " background-color:#efefef;");
                     }
-                    
+
                 }
             }
 
@@ -155,9 +144,9 @@
 
         }
 
-        function setalldis(){
-            var obj=document.getElementsByName("radio")
-            for (var i=0;i<obj.length;i++){
+        function setalldis() {
+            var obj = document.getElementsByName("radio")
+            for (var i = 0; i < obj.length; i++) {
                 obj[i].disabled = 'true';
             }
         }
