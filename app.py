@@ -103,46 +103,60 @@ surveys = {
     "test": test
 }
 
+Test_No = 0
 
 @app.route('/')
 def home():
+    global Test_No 
+    tester_no = Test_No 
+    Test_No = Test_No + 1
     surveys_taken = json.loads(request.cookies.get("surveys_taken", '{}'))
     current_user_surveys = surveys.copy()
     for survey in surveys_taken:
         current_user_surveys.pop(survey, None)
-    return render_template('home.html', surveys=current_user_surveys)
+    return render_template('home.html', testNO = tester_no,surveys=current_user_surveys)
 
 
-Test_No = 0
+
 
 
 @app.route('/start-survey/<string:survey_picked>/<int:tester_no>', methods=["POST", "GET"])
-def start_survey(tester_no=0, survey_picked=None):
+def start_survey(tester_no, survey_picked=None):
     # store survey picked in session
     session['survey_name'] = survey_picked
-    # if survey_picked == "test":
-    #     re_init()
-    #     test.questions = assign_test(set1)
-    # print("AAA")
-    # print(survey_picked)
-    # print(len(surveys[survey_picked].questions))
-    # session[survey_picked] = [()] * len(surveys[survey_picked].questions)
+
     session[survey_picked] = [()] * 45
 
-    if survey_picked == "test":
-        global Test_No
-        tester_no = Test_No
-        Test_No = Test_No + 1
-    else:
-        tester_no = 0
+    if survey_picked=="trial":
+        tester_age = request.form.get("age")
+        tester_sex = request.form.get("sex")
+        tester_edu = request.form.get("education")
+        tester_exp1_1 = request.form.get("visual-exp-month")
+        tester_exp1_2 = request.form.get("visual-exp-year")
+        tester_exp2_1 = request.form.get("data-ana-exp-month")
+        tester_exp2_2 = request.form.get("data-ana-exp-year")
+
+        tester_expa = int(tester_exp1_2)+int(tester_exp1_1)/12.0
+        tester_expb = int(tester_exp2_2)+int(tester_exp2_1)/12.0
+        
+        tester_exp1 = str(tester_expa)
+        tester_exp2 = str(tester_expb)
+
+    
+        result_file = open('result/result_%s.json' % tester_no, 'w+', encoding="utf-8")
+        result_file.write("{\n\"No.\":\"%s\"," % tester_no)
+        result_file.write("\"Age\":\"%s\",\n\"Sex\":\"%s\",\n\"Education\":\"%s\",\n\"Vis-Exp\":\"%s\",\n\"Data-Exp\":\"%s\","
+                          %(tester_age,tester_sex,tester_edu,tester_exp1,tester_exp2))
+        result_file.close()
+        
 
     return render_template('start-survey.html', name=survey_picked, tester=tester_no,
                            title=surveys[survey_picked].title,
                            instructions=surveys[survey_picked].instructions)
 
 
-@app.route('/trial/<int:question_num>', methods=["POST", "GET"])
-def trial(question_num):
+@app.route('/trial/<int:tester_no>/<int:question_num>', methods=["POST", "GET"])
+def trial(tester_no,question_num):
     survey_picked = session['survey_name']
     survey_picked = 'trial'  # 强改呃呃呃 防止并行时另一个用户已经进入test，导致本用户无法进入trial
     if question_num != 0:
@@ -164,9 +178,10 @@ def trial(question_num):
             flash(question, 'question')
             flash(answer, 'answer')
             flash(comment, 'comment')
-        return redirect('/start-survey/test/0')
+        test_tester_no = str(tester_no)
+        return redirect('/start-survey/test/%s'%test_tester_no)
 
-    return render_template('trial.html', next_id=question_num + 1,
+    return render_template('trial.html', next_id=question_num + 1,tester = tester_no,
                            question=surveys[survey_picked].questions[question_num].question,
                            choices=surveys[survey_picked].questions[question_num].choices,
                            answer=surveys[survey_picked].questions[question_num].answer,
@@ -221,8 +236,8 @@ def question(tester_No, test_num, question_num_):
     own_questions = obj
 
     if test_num == 0 and question_num_ == 0:
-        result_file = open('result/result_%s.json' % tester_No, 'w+', encoding="utf-8")
-        result_file.write("{\n\"No.\":\"%s\",\n\"QA\":[" % tester_No)
+        result_file = open('result/result_%s.json' % tester_No, 'a+', encoding="utf-8")
+        result_file.write("\n\"QA\":[")
         result_file.close()
 
     survey_picked = session['survey_name']
