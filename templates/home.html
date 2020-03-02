@@ -2,15 +2,31 @@
   {% block title %}Home Page{% endblock %}
 
   {% block body %}
-  <h1>Start Testing</h1>
+  <h1>A Quick Info-Survey</h1>
   <div>
-    <form action="/start-survey/trial/0" method="POST">
+    <form action="/start-survey/trial/{{ testNO }}" method="POST">
 {#      <select name="survey">#}
 {#        {% for survey in surveys %}#}
 {#        <option value="{{survey}}">{{survey}}</option>#}
 {#        {% endfor %}#}
 {#      </select>#}
-      <button type="submit">Start</button>
+        Age 
+        <input type ="text" name = "age"><br>
+        Sex 
+        <input type ="radio" name ="sex" value = "male" data-labelauty="male">
+        <input type ="radio" name = "sex" value = "female" data-labelauty="female"><br>
+        Education 
+        <input type ="radio" name ="education" value = "high school" data-labelauty="high school">
+        <input type ="radio" name = "education" value = "undergraduate" data-labelauty="undergraduate">
+        <input type ="radio" name = "education" value = "master/doctor" data-labelauty="master/doctor">
+        <input type ="radio" name = "education" value = "others" data-labelauty="others">
+        How long have you ... (Visualization Experience)?
+        <input type = "text" name="visual-exp-year">years<input type = "text" name="visual-exp-month">months<br>
+        How long have you ... (Data Analysis Experience)?
+        <input type = "text" name="data-ana-exp-year">years<input type = "text" name="data-ana-exp-month">months<br>
+
+
+      <button type="submit">Now Start Our Test</button>
     </form>
   </div>
   {% endblock %}
