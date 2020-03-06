@@ -226,7 +226,7 @@
 			console.log(input_name);
 			// alert(window.location.href);
 			if(input_name == "radio"){
-				block = '<label for="' + input_id + '">' +
+				block = '<label for="' + input_id + '" style="display: flex">' +
 							'<span class="labelauty-unchecked-image"></span>' +
 							'<span class="labelauty-unchecked">' + unchecked_message + '</span>' +
 							'<span class="labelauty-checked-image"></span>' +

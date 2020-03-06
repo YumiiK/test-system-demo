@@ -15,7 +15,8 @@
                 {#                    <legend>{{ question }}</legend>#}
                 <ul class="dowebok">
                     {% for choice in choices %}
-                        <li style="width: 728px;"><input type="radio" id="{{ choice }}" value="{{ choice }}"
+                        <li style="width: 728px;padding-bottom: 15px;">
+                            <input type="radio" id="{{ choice }}" value="{{ choice }}"
                                                          name="radio" data-labelauty="{{ choice }}"
                                                          onclick="show_answer();" style="width: 728px;"></li>
                         <!-- <label for="{{ choice }}">{{ choice }}</label><br/> -->
@@ -89,10 +90,10 @@
                 for (i = 0; i < laArr.length; i++) {
                     if (laArr[i].getAttributeNode("for").value == obj[x].value) {
                         //alert("get");
-                        laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53);color:white;");
+                        laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53);color:white;display:flex;");
 
                     } else {
-                        laArr[i].setAttribute("style", " background-color:#efefef;");
+                        laArr[i].setAttribute("style", " background-color:#efefef;display:flex;");
                     }
 
                     laArr[i].disabled = true;
@@ -105,12 +106,12 @@
                     if (laArr[i].getAttributeNode("for").value == obj[x].value) {
 
 
-                        laArr[i].setAttribute("style", " background-color:rgb(219, 26, 26);color:white;padding-left: 9px;");
+                        laArr[i].setAttribute("style", " background-color:rgb(219, 26, 26);color:white;padding-left: 9px;display:flex;");
 
                         var icon = laArr[i].getElementsByTagName("span");
                         for (j = 0; j < icon.length; j++) {
                             if (icon[j].getAttribute("class") == "labelauty-checked-image") {
-                                icon[j].setAttribute("style", "background-image: url(../static/icon/cross.png );scale:0.8;");
+                                icon[j].setAttribute("style", "background-image: url(../../static/icon/cross.png );transform: scale(0.8);");
                             }
                         }
 
@@ -118,7 +119,7 @@
                     } else if (laArr[i].getAttributeNode("for").value == obj[y].value) {
 
 
-                        laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53);color:#ffffff;");
+                        laArr[i].setAttribute("style", " background-color:rgb(33, 151, 53);color:#ffffff;display:flex;");
 
                         var icon = laArr[i].getElementsByTagName("span");
                         for (j = 0; j < icon.length; j++) {
@@ -126,7 +127,7 @@
 
                             if (icon[j].getAttribute("class") == "labelauty-unchecked-image") {
 
-                                icon[j].setAttribute("style", "background-image: url(../static/icon/input-checked.png );scale:0.8;");
+                                icon[j].setAttribute("style", "background-image: url(../../static/icon/input-checked.png );transform: scale(0.8);");
 
                             }
 
@@ -134,7 +135,7 @@
                         }
 
                     } else {
-                        laArr[i].setAttribute("style", " background-color:#efefef;");
+                        laArr[i].setAttribute("style", " background-color:#efefef;display:flex;");
                     }
 
                 }
