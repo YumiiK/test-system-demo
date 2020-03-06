@@ -132,6 +132,9 @@
 			// Now, grab checkbox ID Attribute for "label" tag use
 			// If there's no ID Attribute, then generate a new one
 			input_id = $object.attr( "id" );
+			let input_name = $object.attr("name");
+			console.log("name");
+			console.log(input_name);
 
 			if( input_id == null )
 			{
@@ -152,7 +155,7 @@
 
 			// Now, add necessary tags to make this work
 			// Here, we're going to test some control variables and act properly
-			$object.after( create( input_id, labels_object, use_labels ) );
+			$object.after( create( input_id, input_name, labels_object, use_labels ) );
 
 			// Now, add "min-width" to label
 			// Let's say the truth, a fixed width is more beautiful than a variable width
@@ -199,7 +202,7 @@
 			window.console.log( "jQuery-LABELAUTY: " + message );
 	};
 
-	function create( input_id, messages_object, label )
+	function create( input_id, input_name, messages_object, label )
 	{
 		var block;
 		var unchecked_message;
@@ -220,12 +223,24 @@
 
 		if( label == true )
 		{
-			block = '<label for="' + input_id + '">' +
-						'<span class="labelauty-unchecked-image"></span>' +
-						'<span class="labelauty-unchecked">' + unchecked_message + '</span>' +
-						'<span class="labelauty-checked-image"></span>' +
-						'<span class="labelauty-checked">' + checked_message + '</span>' +
-					'</label>';
+			console.log(input_name);
+			// alert(window.location.href);
+			if(input_name == "radio"){
+				block = '<label for="' + input_id + '">' +
+							'<span class="labelauty-unchecked-image"></span>' +
+							'<span class="labelauty-unchecked">' + unchecked_message + '</span>' +
+							'<span class="labelauty-checked-image"></span>' +
+							'<span class="labelauty-checked">' + checked_message + '</span>' +
+						'</label>';
+			}
+			else{
+				block = '<label for="' + input_id + '">' +
+							'<span class="labelauty-unchecked-image"></span>' +
+							'<span class="labelauty-unchecked-home">' + unchecked_message + '</span>' +
+							'<span class="labelauty-checked-image"></span>' +
+							'<span class="labelauty-checked-home">' + checked_message + '</span>' +
+						'</label>';
+			}
 		}
 		else
 		{

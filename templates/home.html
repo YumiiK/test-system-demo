@@ -1,32 +1,65 @@
 {% extends 'base.html' %}
-  {% block title %}Home Page{% endblock %}
+{% block title %}Home Page{% endblock %}
 
-  {% block body %}
-  <h1>A Quick Info-Survey</h1>
-  <div>
-    <form action="/start-survey/trial/{{ testNO }}" method="POST">
-{#      <select name="survey">#}
-{#        {% for survey in surveys %}#}
-{#        <option value="{{survey}}">{{survey}}</option>#}
-{#        {% endfor %}#}
-{#      </select>#}
-        Age 
-        <input type ="text" name = "age"><br>
-        Sex 
-        <input type ="radio" name ="sex" value = "male" data-labelauty="male">
-        <input type ="radio" name = "sex" value = "female" data-labelauty="female"><br>
-        Education 
-        <input type ="radio" name ="education" value = "high school" data-labelauty="high school">
-        <input type ="radio" name = "education" value = "undergraduate" data-labelauty="undergraduate">
-        <input type ="radio" name = "education" value = "master/doctor" data-labelauty="master/doctor">
-        <input type ="radio" name = "education" value = "others" data-labelauty="others">
-        How long have you ... (Visualization Experience)?
-        <input type = "text" name="visual-exp-year">years<input type = "text" name="visual-exp-month">months<br>
-        How long have you ... (Data Analysis Experience)?
-        <input type = "text" name="data-ana-exp-year">years<input type = "text" name="data-ana-exp-month">months<br>
-
-
-      <button type="submit">Now Start Our Test</button>
-    </form>
-  </div>
-  {% endblock %}
+{% block body %}
+    <h1>Basic Information</h1>
+    <div>
+    <li style="width: 725px; margin-bottom: 20px;">
+        The following section is about your basic information.
+        All information will be kept strictly confidential and used only for scientific research.
+        Please fill in the blank and choose the option according to your actual situation.
+    </li>
+    </div>
+    <div>
+        <form action="/start-survey/trial/{{ testNO }}" method="POST" style="line-height: 2.5em;">
+            {#      <select name="survey">#}
+            {#        {% for survey in surveys %}#}
+            {#        <option value="{{survey}}">{{survey}}</option>#}
+            {#        {% endfor %}#}
+            {#      </select>#}
+            Your Age:
+            <input type="text" name="age" placeholder="eg.30" class="blank">
+            <br>
+            What is your gender?
+            <br>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="sex" value="Male" data-labelauty="Male"></div>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="sex" value="Female" data-labelauty="Female"></div>
+            What is your highest level of education?
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="education" value="Less than high school" data-labelauty="Less than high school"></div>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="education" value="High school diploma" data-labelauty="High school diploma"></div>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="education" value="Some college" data-labelauty="Some college"></div>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="education" value="Associates' degree" data-labelauty="Associates' degree"></div>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="education" value="Bachelor's degree" data-labelauty="Bachelor's degree"></div>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="education" value="Master's degree" data-labelauty="Master's degree"></div>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="education" value="Doctoral degree" data-labelauty="Doctoral degree"></div>
+            How long is your experience in data visualization?
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="vis" value="Less than 1 year" data-labelauty="Less than 1 year"></div>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="vis" value="1 to 3 years" data-labelauty="1 to 3 years"></div>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="vis" value="3 to 5 years" data-labelauty="3 to 5 years"></div>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="vis" value="More than 5 years" data-labelauty="More than 5 years"></div>
+            How long is your experience in data analysis?
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="data" value="Less than 1 year" data-labelauty="Less than 1 year"></div>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="data" value="1 to 3 years" data-labelauty="1 to 3 years"></div>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="data" value="3 to 5 years" data-labelauty="3 to 5 years"></div>
+            <div style="padding-bottom: 8px;">
+                <input type="radio" name="data" value="More than 5 years" data-labelauty="More than 5 years"></div>
+            <button type="submit" style="margin: 20px 320px;">Next</button>
+        </form>
+    </div>
+{% endblock %}

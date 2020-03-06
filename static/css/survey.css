@@ -1,13 +1,19 @@
 body {
   /*font-family: "benton-sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
   padding: 1em;
-  font-family: "Noto Sans SC";
-  font-weight: 100;
+  font-family: "Noto Sans SC", "Source Han Sans", Helvetica, Tahoma, Arial, sans-serif;
+  font-weight: Bold;
+  font-size: 20px;
 }
 
-h1,
+h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
 h3 {
   text-align: center;
+  font-size: 19px;
 }
 
 div {
@@ -60,7 +66,8 @@ button {
 }
 
 p {
-  font: 20px "Microsoft Yahei";font-weight: bold;
+  font: 20px "Microsoft Yahei", Helvetica, Tahoma, Arial, sans-serif;
+  font-weight: bold;
 }
 
 label {
@@ -68,7 +75,7 @@ label {
 }
 
 .prompt {
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC", "Source Han Sans", Helvetica, Tahoma, Arial, sans-serif;
   font-size: 20px;
 }
 
@@ -82,7 +89,7 @@ text-align: left;
 }
 
 button {
-  font-family: "Microsoft Yahei";
+  font-family: "Microsoft Yahei", sans-serif;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -100,4 +107,32 @@ button:hover {
   background: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.blank {
+  height: 1.8em;
+  width: 6em;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: "Noto Sans SC", "Source Han Sans", Helvetica, Tahoma, Arial, sans-serif;
+}
+
+
+input::-webkit-input-placeholder{
+  color: #9f9f9f;
+  font-weight: normal;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+  color: #9f9f9f;
+  font-weight: normal;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+  color: #9f9f9f;
+  font-weight: normal;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #9f9f9f;
+  font-weight: normal;
 }
